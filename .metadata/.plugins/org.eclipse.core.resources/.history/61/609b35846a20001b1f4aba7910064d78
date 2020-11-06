@@ -21,7 +21,7 @@ public class LightDataDB {
 		
 		for(int i = lightStorage.size()- 1; i > 0; i--){
 			
-			if(lightStorage.get(i).getRoomName().equals(room)){
+			if(lightStorage.get(i).getRoomName() == room){
 				return lightStorage.get(i);
 			}
 		}
