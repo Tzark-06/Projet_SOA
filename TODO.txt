@@ -1,0 +1,11 @@
+TODO:
+
+¤ Report
+
+¤ Manage MySQL DB with Spring Boot
+
+¤ Web interface for good display
+
+¤ Makefile
+
+¤ README

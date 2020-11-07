@@ -73,12 +73,13 @@
           <tags>persp.actionSet:org.eclipse.wst.ws.explorer.explorer</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_z-aKQSA1Eeub6u0R2W-lXQ" selectedElement="_z-aKRyA1Eeub6u0R2W-lXQ" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_z-aKQiA1Eeub6u0R2W-lXQ" elementId="topLeft" containerData="2500" selectedElement="_z-aKQyA1Eeub6u0R2W-lXQ">
+              <tags>active</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_z-aKQyA1Eeub6u0R2W-lXQ" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_z9uNwCA1Eeub6u0R2W-lXQ"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_z-aKRCA1Eeub6u0R2W-lXQ" elementId="org.eclipse.ui.views.ResourceNavigator" toBeRendered="false" ref="_z9wqACA1Eeub6u0R2W-lXQ"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_z-aKRSA1Eeub6u0R2W-lXQ" elementId="org.eclipse.jdt.ui.TypeHierarchy" toBeRendered="false" ref="_z9wqASA1Eeub6u0R2W-lXQ"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_z-aKRiA1Eeub6u0R2W-lXQ" elementId="org.eclipse.jdt.ui.PackagesView" toBeRendered="false" ref="_z-KSoCA1Eeub6u0R2W-lXQ"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_z-aKRyA1Eeub6u0R2W-lXQ" containerData="7500" selectedElement="_z-aKSCA1Eeub6u0R2W-lXQ">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_z-aKRyA1Eeub6u0R2W-lXQ" containerData="7500" selectedElement="_z-aKTSA1Eeub6u0R2W-lXQ">
               <children xsi:type="basic:PartSashContainer" xmi:id="_z-aKSCA1Eeub6u0R2W-lXQ" containerData="7000" selectedElement="_z-aKSSA1Eeub6u0R2W-lXQ" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_z-aKSSA1Eeub6u0R2W-lXQ" elementId="org.eclipse.ui.editorss" containerData="7000" ref="_z9dvECA1Eeub6u0R2W-lXQ"/>
                 <children xsi:type="basic:PartStack" xmi:id="_z-aKSiA1Eeub6u0R2W-lXQ" elementId="topRight" containerData="3000" selectedElement="_z-aKSyA1Eeub6u0R2W-lXQ">
@@ -118,6 +119,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_yko68CA1Eeub6u0R2W-lXQ" elementId="org.eclipse.ui.internal.introview" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Welcome" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.ViewIntroAdapterPart"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view>&#xD;&#xA;&lt;presentation currentPage=&quot;qroot&quot; restore=&quot;true&quot;/>&#xD;&#xA;&lt;standbyPart/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_0wzQgCA1Eeub6u0R2W-lXQ" elementId="org.eclipse.ui.internal.introview">
@@ -136,7 +138,6 @@
       <children xsi:type="basic:PartStack" xmi:id="_z9dvESA1Eeub6u0R2W-lXQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_TgPMwCBLEeuRH_0xrBzT9g">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_vBkQQCBKEeuRH_0xrBzT9g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="LightDataAcquisition.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;LightDataAcquisition.java&quot; partName=&quot;LightDataAcquisition.java&quot; title=&quot;LightDataAcquisition.java&quot; tooltip=&quot;LightManagementWS/src/main/java/fr/insa/soa/LightManagementWS/model/LightDataAcquisition.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/LightManagementWS/src/main/java/fr/insa/soa/LightManagementWS/model/LightDataAcquisition.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;753&quot; selectionTopPixel=&quot;240&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
@@ -150,12 +151,10 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_TgPMwCBLEeuRH_0xrBzT9g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="LightController.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;LightController.java&quot; partName=&quot;LightController.java&quot; title=&quot;LightController.java&quot; tooltip=&quot;LightManagementWS/src/main/java/fr/insa/soa/LightManagementWS/Controller/LightController.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/LightManagementWS/src/main/java/fr/insa/soa/LightManagementWS/Controller/LightController.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;51&quot; selectionTopPixel=&quot;150&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;LightController.java&quot; partName=&quot;LightController.java&quot; title=&quot;LightController.java&quot; tooltip=&quot;LightManagementWS/src/main/java/fr/insa/soa/LightManagementWS/Controller/LightController.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/LightManagementWS/src/main/java/fr/insa/soa/LightManagementWS/Controller/LightController.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;217&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_ZSoCICBLEeuRH_0xrBzT9g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="LightManagementWsApplication.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;LightManagementWsApplication.java&quot; partName=&quot;LightManagementWsApplication.java&quot; title=&quot;LightManagementWsApplication.java&quot; tooltip=&quot;LightManagementWS/src/main/java/fr/insa/soa/LightManagementWS/LightManagementWsApplication.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/LightManagementWS/src/main/java/fr/insa/soa/LightManagementWS/LightManagementWsApplication.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
@@ -177,6 +176,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1604678791613&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_0KT4QCA1Eeub6u0R2W-lXQ" elementId="org.eclipse.ui.navigator.ProjectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -310,7 +311,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_zVoTACA1Eeub6u0R2W-lXQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_7SXicCBpEeunZaBRNl60BA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_xPdQ9yA1Eeub6u0R2W-lXQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_qJ8AdyDuEeums4YIzmGmEg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_xPdQ9yA1Eeub6u0R2W-lXQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_zVoTASA1Eeub6u0R2W-lXQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -340,7 +341,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_zVoTBSA1Eeub6u0R2W-lXQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_7SXieiBpEeunZaBRNl60BA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_xPcp-iA1Eeub6u0R2W-lXQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_qJ8AgSDuEeums4YIzmGmEg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_xPcp-iA1Eeub6u0R2W-lXQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_zVoTBiA1Eeub6u0R2W-lXQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2865,7 +2866,7 @@
   <addons xmi:id="_xL-e7CA1Eeub6u0R2W-lXQ" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_xL-e7SA1Eeub6u0R2W-lXQ" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_xMbx4CA1Eeub6u0R2W-lXQ" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_6DiX0SBpEeunZaBRNl60BA" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_xPKVwCA1Eeub6u0R2W-lXQ" elementId="org.eclipse.ui.category.edit" name="Edit"/>
   <categories xmi:id="_xPKVwSA1Eeub6u0R2W-lXQ" elementId="org.eclipse.mylyn.wikitext.ui.editor.category" name="WikiText Markup Editing Commands" description="commands for editing lightweight markup"/>
