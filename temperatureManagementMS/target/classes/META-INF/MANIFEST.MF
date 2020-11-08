@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: victorleroch
+Build-Jdk: 15
+Implementation-Title: temperatureManagementMS
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: fr.insa.mas
+Implementation-URL: https://spring.io/projects/spring-boot/temperatureMa
+ nagementMS
+Created-By: Maven Integration for Eclipse
+
