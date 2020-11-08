@@ -2,7 +2,7 @@
   <head>
     <title> Sensors Information inside the room </title>
     <meta charset="UTF-8">
-
+    <meta http-equiv="Refresh" content="5; url=mainPage.html">
     <script>
 
       /*Display script for the first scenario : ... */
@@ -28,7 +28,7 @@
             if(roomName.alarmState == "ON"){
               message = `<p style="color : red;"> WARNING: there is an intruder in the room! Police on the way.</p>`;
             }
-                       
+            
             var main =  roomName + `<br/>` + `<br/>` + roomLight + `<br/>` + roomTemp + `<br/>` + roomWindows + `<br/>` + roomDoor + `<br/>` 
             + presence + `<br/>` + alarm + `<br/>` + message + `<br/>`;
             
