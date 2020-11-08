@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title> Sensors Information inside the room </title>
+    <meta charset="UTF-8">
+
+    <script>
+
+      /*Display script for the first scenario : ... */
+      var baseurl = "http://localhost:8088/LightListRoom";
+
+      function loadSensorDataRoom(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET",baseurl + "/GEI-213",true);
+        xmlhttp.onreadystatechange = function() {
+          if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+            var roomInfo = JSON.parse(xmlhttp.responseText);
+            
+            var roomName = "GEI Room id: " + roomInfo.roomName;
+            var roomLight = "Current Light stream inside the room: " + roomInfo.lightValue + " " + roomInfo.lightUnit;
+            var roomTemp = "Current temperature inside the room: " + roomInfo.temperatureValue + " " + roomInfo.temperatureUnit;
+            var roomWindows = "Current state of the windows: " + roomName.roomWindowsState;
+            var roomDoor = "Current state of the door(s): " + roomName.roomDoorState;
+            var presence = "Presence of people inside the room: " + roomName.roomPresence;
+            var alarm = "State alarm the room: " + roomName.alarmState;
+            
+            var message="";
+            //The alarm is triggered when DOOR(S) are CLOSED, WINDOWS are CLOSED, it is beyond 8 PM, and the sensor detected the presence of someone:
+            if(roomName.alarmState == "ON"){
+              message = `<p style="color : red;"> WARNING: there is an intruder in the room! Police on the way.</p>`;
+            }
+                       
+            var main =  roomName + `<br/>` + `<br/>` + roomLight + `<br/>` + roomTemp + `<br/>` + roomWindows + `<br/>` + roomDoor + `<br/>` 
+            + presence + `<br/>` + alarm + `<br/>` + message + `<br/>`;
+            
+            document.getElementById("currentRoomInfo").innerHTML = main;
+          }
+        };
+        xmlhttp.send();
+      }
+      window.onload = function(){
+        loadSensorDataRoom();
+      }
+    </script>
+
+  </head>
+
+  <!-- BODY -->
+  <body>
+
+    <p style="color: blue; font-size: 24px; font-family: 'Trebuchet MS'; text-align: center; margin-left: 100px; border-style: inset ; width : 500px; "> <b>Automatic GEI's rooms management</b></p>
+    <img src="../Interface web/Pictures/classroom.jpg" width="30%" style="margin-left: 130px;">
+    <br/><br/>
+    <p style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; margin-left: 20px;">First Scenario</p>
+    
+    <div id="currentRoomInfo" style="margin-left: 15px; font-family: 'Trebuchet MS'; text-align: center; width: 700px; border-style: outset;">  </div>
+  
+  </body>
+</html>
