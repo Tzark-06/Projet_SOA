@@ -1,6 +1,6 @@
 TODO:
 
-¤ Report
+¤ Report (architecture, diagramme d'interaction BDD <-> services <-> interface web)
 
 ¤ Manage MySQL DB with Spring Boot
 
@@ -9,3 +9,7 @@ TODO:
 ¤ Makefile
 
 ¤ README
+
+¤ Code source:
+	- rajouter SWITCH ON OFF Light
+	-service du capteur de présence
