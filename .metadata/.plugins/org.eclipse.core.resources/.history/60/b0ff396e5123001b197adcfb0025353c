@@ -1,0 +1,52 @@
+package fr.insa.soa.RoomManagementWS.Controller;
+
+import fr.insa.soa.RoomManagementWS.model.*;
+
+import java.util.ArrayList;
+
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
+
+import fr.insa.soa.RoomManagementWS.model.*;
+
+@CrossOrigin
+@RestController
+public class RoomListResource {
+	
+	roomList GEIroomList = new roomList();
+	
+	@GetMapping("/rooms")
+	public ArrayList<String> getRooms(){
+		return GEIroomList.getRoomList();
+	}
+	
+	@PostMapping("/updateRoomInfo/{room}/{light}")
+	public void updateRoomInfo(@PathVariable String room, @PathVariable int light){
+		
+		RestTemplate newRestTemplate = new RestTemplate();
+		
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
+
+		//URI uri = new URI("http://localhost:8080/employee");
+		LightDataAcquisition newLight = new LightDataAcquisition();
+		newLight.setRoomName(room);
+		newLight.setValue(light);
+		newLight.setUnit("Lux");
+
+		HttpEntity<LightDataAcquisition> httpEntity = new HttpEntity<>(newLight, headers);
+
+		RestTemplate restTemplate = new RestTemplate();
+		Employee employee = restTemplate.postForObject(uri, httpEntity, Employee.class);
+		
+		LightDataAcquisition lightData = newRestTemplate.postForObject("http://localhost:8081/LightAcquisition/", httpEntity, LightDataAcquisition.class)
+		GEIroomList.addRoomToList(room);
+	}
+	
+	
+	
+
+}

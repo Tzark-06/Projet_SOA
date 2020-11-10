@@ -4,6 +4,13 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
+<fullyQualifiedTypeName name="org.springframework.http.HttpHeaders"/>
+<fullyQualifiedTypeName name="java.awt.PageAttributes.MediaType"/>
+<fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
+<fullyQualifiedTypeName name="org.springframework.http.HttpEntity"/>
+<fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.LightDataAcquisition"/>
+<fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.tempDataAcquisition"/>
 <fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.roomEnvironment"/>
 <fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.roomInfoList"/>
 </qualifiedTypeNameHistroy>

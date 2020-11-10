@@ -14,7 +14,7 @@ public class tempDataDB {
 	//Retrieve the last temperature data value from the sensor
 		public tempDataAcquisition getTempData(String room){
 			
-			for(int i = tempStorage.size()- 1; i > 0; i--){
+			for(int i = tempStorage.size()- 1; i >= 0; i--){
 				
 				if(tempStorage.get(i).getRoomName().equals(room)){
 					return tempStorage.get(i);

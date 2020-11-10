@@ -19,7 +19,7 @@ public class LightDataDB {
 	//Retrieve the last light data value from the sensor
 	public LightDataAcquisition getLightData(String room){
 		
-		for(int i = lightStorage.size()- 1; i > 0; i--){
+		for(int i = lightStorage.size()- 1; i >= 0; i--){
 			
 			if(lightStorage.get(i).getRoomName().equals(room)){
 				return lightStorage.get(i);
