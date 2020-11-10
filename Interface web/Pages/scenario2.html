@@ -2,33 +2,35 @@
   <head>
     <title> Sensors Information inside the room </title>
     <meta charset="UTF-8">
-    <meta http-equiv="Refresh" content="10; url=mainPage.html">
+    <meta http-equiv="Refresh" content="5; url=mainPage.html">
     <script>
 
       /*Display script for the first scenario : ... */
-      var baseurl = "http://localhost:8090";
+      var baseurl = "http://localhost:8088/LightListRoom";
 
       function loadSensorDataRoom(){
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET",baseurl + "/CurrentRoomInfo/GEI-213",true);
+        xmlhttp.open("GET",baseurl + "/GEI-213",true);
         xmlhttp.onreadystatechange = function() {
-          if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+          if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
             var roomInfo = JSON.parse(xmlhttp.responseText);
             
-            var lightInfoStr = JSON.stringify(roomInfo.light);
-            var lightInfo = JSON.parse(lightInfoStr);
-            var tempInfoStr = JSON.stringify(roomInfo.temp);
-            var tempInfo = JSON.parse(tempInfoStr);
-
             var roomName = "GEI Room id: " + roomInfo.roomName;
-            var roomLight = "Current Light stream inside the room: " + lightInfo.value + " " + lightInfo.unit;
-            var roomTemp = "Current temperature inside the room: " + tempInfo.value + " " + tempInfo.unit;
-            var roomWindows = "Current state of the windows: " + roomInfo.windowsState;
-            var roomDoor = "Current state of the door(s): " + roomInfo.doorsState;
-            var presence = "Presence of people inside the room: " + roomInfo.presence;
-           
+            var roomLight = "Current Light stream inside the room: " + roomInfo.lightValue + " " + roomInfo.lightUnit;
+            var roomTemp = "Current temperature inside the room: " + roomInfo.temperatureValue + " " + roomInfo.temperatureUnit;
+            var roomWindows = "Current state of the windows: " + roomName.roomWindowsState;
+            var roomDoor = "Current state of the door(s): " + roomName.roomDoorState;
+            var presence = "Presence of people inside the room: " + roomName.roomPresence;
+            var alarm = "State alarm the room: " + roomName.alarmState;
+            
+            var message="";
+            //The alarm is triggered when DOOR(S) are CLOSED, WINDOWS are CLOSED, it is beyond 8 PM, and the sensor detected the presence of someone:
+            if(roomName.alarmState == "ON"){
+              message = `<p style="color : red;"> WARNING: there is an intruder in the room! Police on the way.</p>`;
+            }
+            
             var main =  roomName + `<br/>` + `<br/>` + roomLight + `<br/>` + roomTemp + `<br/>` + roomWindows + `<br/>` + roomDoor + `<br/>` 
-            + presence + `<br/>`;
+            + presence + `<br/>` + alarm + `<br/>` + message + `<br/>`;
             
             document.getElementById("currentRoomInfo").innerHTML = main;
           }
