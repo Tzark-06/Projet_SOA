@@ -1,0 +1,20 @@
+package fr.insa.soa.RoomManagementWS.model;
+
+import java.util.ArrayList;
+
+public class roomInfoList {
+	
+	ArrayList<roomEnvironment> roominfolist;
+	
+	public roomInfoList(){
+		this.roominfolist = new ArrayList<roomEnvironment>();
+	}
+	
+	public ArrayList<roomEnvironment> getRoomInfoList(){
+		return this.roominfolist;
+	}
+	
+	public void addRoomInfoToList(roomEnvironment newRoomInfo){
+		this.roominfolist.add(newRoomInfo);
+	}
+}

@@ -41,9 +41,5 @@ public class LightDataAcquisition {
 	public void setRoomName(String roomName) {
 		this.roomName = roomName;
 	}
-
-		
-	
-	
 	
 }
