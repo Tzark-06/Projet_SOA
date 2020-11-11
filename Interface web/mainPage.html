@@ -1,45 +1,8 @@
 <html>
   <head>
-    <title> Sensors Information inside the room </title>
+    <title> Automatic room management </title>
     <meta charset="UTF-8">
     <meta http-equiv="Refresh" content="10; url=mainPage.html">
-    <script>
-
-      /*Display script for the first scenario : ... */
-      var baseurl = "http://localhost:8090";
-
-      function loadSensorDataRoom(){
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET",baseurl + "/CurrentRoomInfo/GEI-213",true);
-        xmlhttp.onreadystatechange = function() {
-          if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-            var roomInfo = JSON.parse(xmlhttp.responseText);
-            
-            var lightInfoStr = JSON.stringify(roomInfo.light);
-            var lightInfo = JSON.parse(lightInfoStr);
-            var tempInfoStr = JSON.stringify(roomInfo.temp);
-            var tempInfo = JSON.parse(tempInfoStr);
-
-            var roomName = "GEI Room id: " + roomInfo.roomName;
-            var roomLight = "Current Light stream inside the room: " + lightInfo.value + " " + lightInfo.unit;
-            var roomTemp = "Current temperature inside the room: " + tempInfo.value + " " + tempInfo.unit;
-            var roomWindows = "Current state of the windows: " + roomInfo.windowsState;
-            var roomDoor = "Current state of the door(s): " + roomInfo.doorsState;
-            var presence = "Presence of people inside the room: " + roomInfo.presence;
-           
-            var main =  roomName + `<br/>` + `<br/>` + roomLight + `<br/>` + roomTemp + `<br/>` + roomWindows + `<br/>` + roomDoor + `<br/>` 
-            + presence + `<br/>`;
-            
-            document.getElementById("currentRoomInfo").innerHTML = main;
-          }
-        };
-        xmlhttp.send();
-      }
-      window.onload = function(){
-        loadSensorDataRoom();
-      }
-    </script>
-
   </head>
 
   <!-- BODY -->
@@ -48,9 +11,12 @@
     <p style="color: blue; font-size: 24px; font-family: 'Trebuchet MS'; text-align: center; margin-left: 100px; border-style: inset ; width : 500px; "> <b>Automatic GEI's rooms management</b></p>
     <img src="../Interface web/Pictures/classroom.jpg" width="30%" style="margin-left: 130px;">
     <br/><br/>
-    <p style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; margin-left: 20px;">First Scenario</p>
     
-    <div id="currentRoomInfo" style="margin-left: 15px; font-family: 'Trebuchet MS'; text-align: center; width: 700px; border-style: outset;">  </div>
+    <div id="mainPage" style="margin-left: 130px; font-family: 'Trebuchet MS';"> 
+    <p style="font-weight: bold; font-size: 20px;">Choose your scenario : </p> <br/>
+    <a href="./Pages/scenario1.html">First scenario</a> <br/>
+    <a href="./Pages/scenario2.html">Second scenario</a> <br/>
+    </div>
   
   </body>
 </html>
