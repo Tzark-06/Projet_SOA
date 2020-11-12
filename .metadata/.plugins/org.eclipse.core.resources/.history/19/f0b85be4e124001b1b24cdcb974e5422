@@ -69,7 +69,7 @@ public class RoomListResource {
 		//Traitement scénarios...
 		
 		
-		roomEnvironment newRoomInfo = new roomEnvironment(room,  newLight, newTemp, "CLOSED", "OPEN", "YES","ON");
+		roomEnvironment newRoomInfo = new roomEnvironment(room,  newLight, newTemp, "CLOSED", "OPEN", "YES");
 		
 		GEIroomList.addRoomToList(newRoomInfo);
 	}

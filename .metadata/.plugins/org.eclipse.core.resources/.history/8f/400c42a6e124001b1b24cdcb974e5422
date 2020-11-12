@@ -11,9 +11,8 @@ public class roomEnvironment {
 	private String windowsState;	// 2 values: "OPEN", "CLOSED"
 	private String doorsState;		// 2 values: "OPEN", "CLOSED"
 	private String presence;		//if there is at least one person inside : "YES", else "NO"
-	private String switchLight; 	//2 values: "ON", "OFF"
 	
-	public roomEnvironment(String roomName, LightDataAcquisition light, tempDataAcquisition temp, String windowsState, String doorsState, String presence, String switchLight) {
+	public roomEnvironment(String roomName, LightDataAcquisition light, tempDataAcquisition temp, String windowsState, String doorsState, String presence) {
 		super();
 		this.roomName = roomName;
 		this.light = light;
@@ -21,17 +20,8 @@ public class roomEnvironment {
 		this.windowsState = windowsState;
 		this.doorsState = doorsState;
 		this.presence = presence;
-		this.switchLight = switchLight;
 	}
 	
-	public String getSwitchLight() {
-		return switchLight;
-	}
-
-	public void setSwitchLight(String switchLight) {
-		this.switchLight = switchLight;
-	}
-
 	public String getRoomName() {
 		return roomName;
 	}
@@ -52,7 +42,7 @@ public class roomEnvironment {
 		return temp;
 	}
 
-	public void setTemp(tempDataAcquisition temp) {
+	public void setTempValue(tempDataAcquisition temp) {
 		this.temp = temp;
 	}
 

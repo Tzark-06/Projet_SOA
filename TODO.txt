@@ -12,4 +12,4 @@ TODO:
 
 ¤ Code source:
 	- rajouter SWITCH ON OFF Light
-	-service du capteur de présence
+	-service du capteur de présence avec temps courant !!
