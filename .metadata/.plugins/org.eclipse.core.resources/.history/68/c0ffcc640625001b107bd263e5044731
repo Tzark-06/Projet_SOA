@@ -39,7 +39,7 @@ public class RoomListResource {
 				
 		roomEnvironment currentInfo = new roomEnvironment(room, lightData, tempData,   
 				GEIroomList.getSpecificRoomInfo(room).getWindowsState(), 
-				GEIroomList.getSpecificRoomInfo(room).getDoorsState(), "YES","ON","OFF");
+				GEIroomList.getSpecificRoomInfo(room).getDoorsState(), "YES","ON");
 		
 		return currentInfo;
 	}

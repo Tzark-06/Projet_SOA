@@ -27,9 +27,10 @@
             var roomWindows = "Current state of the windows: " + roomInfo.windowsState;
             var roomDoor = "Current state of the door(s): " + roomInfo.doorsState;
             var presence = "Presence of people inside the room: " + roomInfo.presence;
+            var alarm = "State alarm the room: " + roomName.alarmState;
            
             var main =  roomName + `<br/>` + `<br/>` + stateLightButton + `<br/>` + roomLight + `<br/>` + roomTemp + `<br/>` + roomWindows + `<br/>` + roomDoor + `<br/>` 
-            + presence + `<br/>`;
+            + presence + `<br/>` + alarm +  `<br/>`;
             
             document.getElementById("currentRoomInfo").innerHTML = main;
           }

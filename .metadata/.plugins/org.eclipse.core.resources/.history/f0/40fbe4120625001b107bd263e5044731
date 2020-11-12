@@ -54,8 +54,7 @@ public class roomList {
 			}
 		}		
 		roomEnvironment tmp = new roomEnvironment("undefined", new LightDataAcquisition(-1,"Lux","undefined"), 
-				new tempDataAcquisition(-1.0,"degC","undefined"), "undefined", "undefined", "undefined","undefined",
-				"undefined");
+				new tempDataAcquisition(-1.0,"degC","undefined"), "undefined", "undefined", "undefined");
 		
 		return tmp;
 	}

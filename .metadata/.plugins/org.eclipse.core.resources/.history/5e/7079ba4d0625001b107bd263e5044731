@@ -27,7 +27,14 @@ public class roomEnvironment {
 		this.alarmState = alarmState;
 	}
 	
-	
+	public String getSwitchLight() {
+		return switchLight;
+	}
+
+	public void setSwitchLight(String switchLight) {
+		this.switchLight = switchLight;
+	}
+
 	public String getRoomName() {
 		return roomName;
 	}
@@ -76,23 +83,7 @@ public class roomEnvironment {
 		this.presence = presence;
 	}
 	
-	public String getSwitchLight() {
-		return switchLight;
-	}
-
-	public void setSwitchLight(String switchLight) {
-		this.switchLight = switchLight;
-	}
-
-
-	public String getAlarmState() {
-		return alarmState;
-	}
-
-
-	public void setAlarmState(String alarmState) {
-		this.alarmState = alarmState;
-	}
+	
 
 	
 }

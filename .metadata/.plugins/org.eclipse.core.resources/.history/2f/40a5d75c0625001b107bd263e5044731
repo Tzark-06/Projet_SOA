@@ -39,7 +39,7 @@ public class RoomListResource {
 				
 		roomEnvironment currentInfo = new roomEnvironment(room, lightData, tempData,   
 				GEIroomList.getSpecificRoomInfo(room).getWindowsState(), 
-				GEIroomList.getSpecificRoomInfo(room).getDoorsState(), "YES","ON","OFF");
+				GEIroomList.getSpecificRoomInfo(room).getDoorsState(), "YES","ON");
 		
 		return currentInfo;
 	}
@@ -69,7 +69,7 @@ public class RoomListResource {
 		//Traitement scénarios...
 		
 		
-		roomEnvironment newRoomInfo = new roomEnvironment(room,  newLight, newTemp, "CLOSED", "OPEN", "YES","ON","OFF");
+		roomEnvironment newRoomInfo = new roomEnvironment(room,  newLight, newTemp, "CLOSED", "OPEN", "YES","ON");
 		
 		GEIroomList.addRoomToList(newRoomInfo);
 	}
