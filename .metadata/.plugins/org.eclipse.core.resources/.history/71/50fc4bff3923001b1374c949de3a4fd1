@@ -1,7 +1,0 @@
-package fr.insa.soa.RoomManagementWS.Controller;
-
-import fr.insa.soa.RoomManagementWS.model.*;
-
-public class RoomListResource {
-
-}

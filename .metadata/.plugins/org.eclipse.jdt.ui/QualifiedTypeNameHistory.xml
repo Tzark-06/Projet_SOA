@@ -13,4 +13,6 @@
 <fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.tempDataAcquisition"/>
 <fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.roomEnvironment"/>
 <fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.roomInfoList"/>
+<fullyQualifiedTypeName name="fr.insa.soa.AlarmManagementWS.model.AlarmDataList"/>
+<fullyQualifiedTypeName name="fr.insa.soa.AlarmManagementWS.model.AlarmAcquisition"/>
 </qualifiedTypeNameHistroy>

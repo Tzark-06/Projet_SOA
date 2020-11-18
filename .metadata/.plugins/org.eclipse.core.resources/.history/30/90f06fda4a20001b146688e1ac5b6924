@@ -1,5 +1,0 @@
-package fr.insa.soa.LightManagementWS.model;
-
-public class LightDataAcquisition {
-
-}

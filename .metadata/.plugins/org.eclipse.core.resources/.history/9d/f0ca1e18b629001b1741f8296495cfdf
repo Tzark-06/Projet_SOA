@@ -1,0 +1,37 @@
+package fr.insa.soa.AlarmManagementWS.model;
+
+import java.util.ArrayList;
+
+
+public class AlarmDataList {
+
+private ArrayList<AlarmAcquisition> alarmStorage = new ArrayList<AlarmAcquisition>();
+	
+	public AlarmDataList(){
+		super();
+	}
+	
+	//Return all state values of the alarm of the room
+	public ArrayList<AlarmAcquisition> getLightDataList(){
+		return alarmStorage;
+	}
+	
+	//Retrieve the last light data value from the sensor
+	public AlarmAcquisition getAlarmState(String room){
+		
+		for(int i = alarmStorage.size()- 1; i >= 0; i--){
+			
+			if(alarmStorage.get(i).getRoom().equals(room)){
+				return alarmStorage.get(i);
+			}
+		}
+		AlarmAcquisition virtualAlarm = new AlarmAcquisition(room, "OFF");
+		
+		return virtualAlarm;
+	}
+	
+	public void addLightData(int value, String unit, String roomName){
+		LightDataAcquisition newLightData = new LightDataAcquisition(value, unit, roomName);
+		lightStorage.add(newLightData);
+	}
+}
