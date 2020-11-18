@@ -996,3 +996,8 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 2020-11-12 17:44:55,787 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2020-11-12 17:44:55,791 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-11-12 17:44:55,791 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\UtilisateurTZ\Supérieur\INSA\5A\Service Oriented Architecture\Projet_SOA\RoomManagementWS\RoomManagementWS\src\test\resources
+2020-11-18 15:42:40,842 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-18 15:42:40,858 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-18 15:42:40,880 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-18 15:42:40,895 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-18 15:42:40,895 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\UtilisateurTZ\Supérieur\INSA\5A\Service Oriented Architecture\Projet_SOA\RoomManagementWS\RoomManagementWS\src\test\resources

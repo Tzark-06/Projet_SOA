@@ -48,7 +48,7 @@ public class LightController {
 	
 	
 	@PostMapping("/LightAcquisition/{room}/{value}/{unit}")
-	public void addLightAcq(@PathVariable String room, @PathVariable int value, @PathVariable String unit){
+	public void addStudentToList(@PathVariable String room, @PathVariable int value, @PathVariable String unit){
 		LightRoomAcquisitionList.addLightData(value, unit, room);
 	}
 	
