@@ -2,7 +2,7 @@ TODO:
 
 ¤ Report (architecture, diagramme d'interaction BDD <-> services <-> interface web)
 
-¤ Manage MySQL DB with Spring Boot
+¤ Rleation avec OM2M
 
 ¤ Web interface for good display
 
@@ -12,4 +12,9 @@ TODO:
 
 ¤ Code source:
 	- rajouter SWITCH ON OFF Light
-	-service du capteur de présence avec temps courant !!
+
+¤Questions:
+- Body des requêtes POST
+- Livrable des fichiers sources ?
+- Makefile ou pas ?
+- Jira : exporter les sprints/user stories ?
