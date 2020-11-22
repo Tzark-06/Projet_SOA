@@ -15,4 +15,6 @@
 <fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.roomInfoList"/>
 <fullyQualifiedTypeName name="fr.insa.soa.AlarmManagementWS.model.AlarmDataList"/>
 <fullyQualifiedTypeName name="fr.insa.soa.AlarmManagementWS.model.AlarmAcquisition"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 </qualifiedTypeNameHistroy>

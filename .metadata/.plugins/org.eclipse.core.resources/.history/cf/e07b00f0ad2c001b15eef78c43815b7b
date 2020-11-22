@@ -1,0 +1,36 @@
+package fr.insa.mas.presenceManagementMS;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+@SpringBootApplication
+public class PresenceManagementMsApplication {
+
+	public static void main(String[] args) {
+		
+		Date currDate = new Date();
+		SimpleDateFormat pattern = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+		
+		String currentTime = pattern.format(currDate);
+		
+		if(currentTime.contains(" 19:")){
+			System.out.println("WARNING");
+		}
+		System.out.println("Current date: " + currentTime);
+		/*try {
+			 currentTime = format.parse(dateStart);
+			 long
+			 
+		 } catch (Exception e) {
+        e.printStackTrace();
+    }*/
+		
+		
+		
+		SpringApplication.run(PresenceManagementMsApplication.class, args);
+	}
+
+}
