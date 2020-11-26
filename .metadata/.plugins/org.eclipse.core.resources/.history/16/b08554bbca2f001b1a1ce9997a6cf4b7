@@ -2,7 +2,6 @@ package fr.insa.soa.RoomManagementWS.Controller;
 
 import fr.insa.soa.RoomManagementWS.model.*;
 
-import java.awt.PageAttributes.OriginType;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -138,28 +137,18 @@ public class RoomListResource {
 		GEIroomList.addRoomToList(newRoomInfo);*/
 		
 		String createLightUrl = "http://localhost:8081/createLightData";
-		
+		 
 		RestTemplate restTemplate = new RestTemplate();
 	    HttpHeaders headers = new HttpHeaders();
 	    headers.setContentType(MediaType.APPLICATION_JSON);
-	    // ty=4
-	    //X-M2M-Origin: admin:admin
 	    JSONObject lightJsonObject = new JSONObject();
-
-		lightJsonObject.put("Value", light);
-		lightJsonObject.put("unit", "Lux");
+	    lightJsonObject.put("Value", light);
+	    lightJsonObject.put("unit", "Lux");
 	    lightJsonObject.put("Room", room);
 	    
-	    
 	    HttpEntity<String> request = new HttpEntity<String>(lightJsonObject.toString(), headers);
-	    //HttpEntity<LightDataAcquisition> request = new HttpEntity<LightDataAcquisition>(lightJsonObject, headers);
 	    LightDataAcquisition lightData = restTemplate.postForObject(createLightUrl, request, LightDataAcquisition.class);
 	    
-	    
-	    tempDataAcquisition tempData = new tempDataAcquisition(25,"degC","GEI-213");
-	    roomEnvironment newRoomInfo = new roomEnvironment(room,  lightData, tempData, "CLOSED", "OPEN","YES","ON","OFF");
-		
-		GEIroomList.addRoomToList(newRoomInfo);		
 	    
 	}
 	

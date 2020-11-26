@@ -38,17 +38,23 @@ public class LightController {
 	public LightDataDB lightList(){
 		return LightRoomAcquisitionList;
 	}
+	
 		
+	@GetMapping(value="/LightDataNumber")
+	public String lightDataNumber(){
+		
+		return ("The number of light data collected by the sensor is " + Integer.toString(LightRoomAcquisitionList.getLightDataList().size()));
+	}
+	
 	
 	@PostMapping("/LightAcquisition/{room}/{value}/{unit}")
 	public void addLightAcq(@PathVariable String room, @PathVariable int value, @PathVariable String unit){
 		LightRoomAcquisitionList.addLightData(value, unit, room);
 	}
 	
-	@PostMapping(value = "/createLightData", consumes = "application/json") //, produces = "application/json")
-	public LightDataAcquisition createLightData(@RequestBody LightDataAcquisition lightData) {
+	@PostMapping(value = "/createLightData", consumes = "application/json", produces = "application/json")
+	public void createLightData(@RequestBody LightDataAcquisition lightData) {
 	    LightRoomAcquisitionList.addNewLightData(lightData);
-	    return lightData;
 	}
 		
 	

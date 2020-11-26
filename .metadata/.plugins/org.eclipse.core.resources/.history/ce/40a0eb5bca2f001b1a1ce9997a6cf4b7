@@ -2,14 +2,11 @@ package fr.insa.soa.RoomManagementWS.Controller;
 
 import fr.insa.soa.RoomManagementWS.model.*;
 
-import java.awt.PageAttributes.OriginType;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import java.util.ArrayList;
 
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -101,7 +98,9 @@ public class RoomListResource {
 	
 	
 	@PostMapping("/updateRoomInfo/{room}/{light}/{temp}/{presence}")
-	public void updateRoomInfo(@PathVariable String room, @PathVariable int light, @PathVariable double temp, @PathVariable int presence) throws JSONException{
+	public void updateRoomInfo(@PathVariable String room, @PathVariable int light, @PathVariable double temp, @PathVariable int presence){
+		
+		RestTemplate newRestTemplate = new RestTemplate();
 		
 		/*HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
@@ -113,9 +112,6 @@ public class RoomListResource {
 
 		HttpEntity<LightDataAcquisition> httpEntity = new HttpEntity<>(newLight, headers);*/
 	
-		/*RestTemplate newRestTemplate = new RestTemplate();
-		
-		
 		LightDataAcquisition lightData = newRestTemplate.postForObject("http://localhost:8081/LightAcquisition/"+room+"/"+light+"/Lux", null, LightDataAcquisition.class);
 		tempDataAcquisition tempData = newRestTemplate.postForObject("http://localhost:8082/tempAcquisition/"+room+"/"+temp+"/degC", null, tempDataAcquisition.class);
 		presenceModel presData = newRestTemplate.postForObject("http://localhost:8084/PresenceAcquisition/"+room+"/"+presence, null, presenceModel.class);
@@ -135,32 +131,7 @@ public class RoomListResource {
 		
 		roomEnvironment newRoomInfo = new roomEnvironment(room,  newLight, newTemp, "CLOSED", "OPEN",detectPresence,"ON","OFF");
 		
-		GEIroomList.addRoomToList(newRoomInfo);*/
-		
-		String createLightUrl = "http://localhost:8081/createLightData";
-		
-		RestTemplate restTemplate = new RestTemplate();
-	    HttpHeaders headers = new HttpHeaders();
-	    headers.setContentType(MediaType.APPLICATION_JSON);
-	    // ty=4
-	    //X-M2M-Origin: admin:admin
-	    JSONObject lightJsonObject = new JSONObject();
-
-		lightJsonObject.put("Value", light);
-		lightJsonObject.put("unit", "Lux");
-	    lightJsonObject.put("Room", room);
-	    
-	    
-	    HttpEntity<String> request = new HttpEntity<String>(lightJsonObject.toString(), headers);
-	    //HttpEntity<LightDataAcquisition> request = new HttpEntity<LightDataAcquisition>(lightJsonObject, headers);
-	    LightDataAcquisition lightData = restTemplate.postForObject(createLightUrl, request, LightDataAcquisition.class);
-	    
-	    
-	    tempDataAcquisition tempData = new tempDataAcquisition(25,"degC","GEI-213");
-	    roomEnvironment newRoomInfo = new roomEnvironment(room,  lightData, tempData, "CLOSED", "OPEN","YES","ON","OFF");
-		
-		GEIroomList.addRoomToList(newRoomInfo);		
-	    
+		GEIroomList.addRoomToList(newRoomInfo);
 	}
 	
 	

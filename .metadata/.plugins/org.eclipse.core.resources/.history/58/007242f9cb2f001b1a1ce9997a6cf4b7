@@ -2,7 +2,6 @@ package fr.insa.soa.RoomManagementWS.Controller;
 
 import fr.insa.soa.RoomManagementWS.model.*;
 
-import java.awt.PageAttributes.OriginType;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -101,7 +100,7 @@ public class RoomListResource {
 	
 	
 	@PostMapping("/updateRoomInfo/{room}/{light}/{temp}/{presence}")
-	public void updateRoomInfo(@PathVariable String room, @PathVariable int light, @PathVariable double temp, @PathVariable int presence) throws JSONException{
+	public void updateRoomInfo(@PathVariable String room, @PathVariable int light, @PathVariable double temp, @PathVariable int presence){
 		
 		/*HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
@@ -142,17 +141,12 @@ public class RoomListResource {
 		RestTemplate restTemplate = new RestTemplate();
 	    HttpHeaders headers = new HttpHeaders();
 	    headers.setContentType(MediaType.APPLICATION_JSON);
-	    // ty=4
-	    //X-M2M-Origin: admin:admin
 	    JSONObject lightJsonObject = new JSONObject();
-
-		lightJsonObject.put("Value", light);
-		lightJsonObject.put("unit", "Lux");
+	    lightJsonObject.put("Value", light);
+	    lightJsonObject.put("unit", "Lux");
 	    lightJsonObject.put("Room", room);
 	    
-	    
 	    HttpEntity<String> request = new HttpEntity<String>(lightJsonObject.toString(), headers);
-	    //HttpEntity<LightDataAcquisition> request = new HttpEntity<LightDataAcquisition>(lightJsonObject, headers);
 	    LightDataAcquisition lightData = restTemplate.postForObject(createLightUrl, request, LightDataAcquisition.class);
 	    
 	    
