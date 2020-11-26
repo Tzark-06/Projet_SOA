@@ -35,6 +35,9 @@ public class LightDataDB {
 		lightStorage.add(newLightData);
 	}
 	
+	public void addNewLightData(LightDataAcquisition newLight){
+		lightStorage.add(newLight);	
+	}
 	
 }
 

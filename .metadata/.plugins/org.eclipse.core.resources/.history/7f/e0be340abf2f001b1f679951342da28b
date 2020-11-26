@@ -52,9 +52,9 @@ public class LightController {
 		LightRoomAcquisitionList.addLightData(value, unit, room);
 	}
 	
-	@PostMapping(value = "/createLightData", consumes = "application/json", produces = "application/json")
-	public void createLightData(@RequestBody LightDataAcquisition lightData) {
-	    LightRoomAcquisitionList.addNewLightData(lightData);
+	@PostMapping(value = "/createPerson", consumes = "application/json", produces = "application/json")
+	public LightDataAcquisition createLightData(@RequestBody LightDataAcquisition lightData) {
+	    return personService.saveUpdatePerson(lightData);
 	}
 		
 	

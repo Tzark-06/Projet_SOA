@@ -16,6 +16,11 @@ public class LightDataAcquisition {
 		this.unit = unit;
 		this.roomName = roomName;
 	}
+	
+	public LightDataAcquisition saveLightDataAcquisition(LightDataAcquisition newData){
+		LightDataAcquisition newLight = new LightDataAcquisition(newData.getValue(), newData.getUnit(), newData.getRoomName());
+		return newLight;
+	}
 
 	
 	public int getValue() {

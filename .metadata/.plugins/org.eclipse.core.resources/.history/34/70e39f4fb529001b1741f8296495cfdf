@@ -1,5 +1,0 @@
-package fr.insa.soa.AlarmManagementWS.model;
-
-public class AlarmAcquisition {
-
-}
