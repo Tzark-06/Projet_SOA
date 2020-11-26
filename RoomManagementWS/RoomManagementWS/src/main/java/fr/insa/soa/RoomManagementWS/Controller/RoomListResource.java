@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -17,6 +18,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import fr.insa.soa.RoomManagementWS.model.*;
+
+import org.json.JSONException;
 
 @CrossOrigin
 @RestController
@@ -101,8 +104,8 @@ public class RoomListResource {
 	
 	
 	@PostMapping("/updateRoomInfo/{room}/{light}/{temp}/{presence}")
-	public void updateRoomInfo(@PathVariable String room, @PathVariable int light, @PathVariable double temp, @PathVariable int presence) throws JSONException{
-		
+	public void updateRoomInfo(@PathVariable String room, @PathVariable int light, @PathVariable double temp, @PathVariable int presence) {
+	
 		/*HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
 
@@ -138,28 +141,34 @@ public class RoomListResource {
 		GEIroomList.addRoomToList(newRoomInfo);*/
 		
 		String createLightUrl = "http://localhost:8081/createLightData";
+		String lightSensorUrl = "http://localhost:8282/mn-cse/mn-name/LightSensor/DATA";
 		
 		RestTemplate restTemplate = new RestTemplate();
 	    HttpHeaders headers = new HttpHeaders();
 	    headers.setContentType(MediaType.APPLICATION_JSON);
 	    // ty=4
 	    //X-M2M-Origin: admin:admin
-	    JSONObject lightJsonObject = new JSONObject();
+	    try{
+	    	JSONObject lightJsonObject = new JSONObject();
 
-		lightJsonObject.put("Value", light);
-		lightJsonObject.put("unit", "Lux");
-	    lightJsonObject.put("Room", room);
-	    
-	    
-	    HttpEntity<String> request = new HttpEntity<String>(lightJsonObject.toString(), headers);
-	    //HttpEntity<LightDataAcquisition> request = new HttpEntity<LightDataAcquisition>(lightJsonObject, headers);
-	    LightDataAcquisition lightData = restTemplate.postForObject(createLightUrl, request, LightDataAcquisition.class);
-	    
+			lightJsonObject.put("Value", light);
+			lightJsonObject.put("unit", "Lux");
+		    lightJsonObject.put("Room", room);
+		    
+		    
+		    HttpEntity<String> request = new HttpEntity<String>(lightJsonObject.toString(), headers);
+		    //HttpEntity<LightDataAcquisition> request = new HttpEntity<LightDataAcquisition>(lightJsonObject, headers);
+		    LightDataAcquisition lightData = restTemplate.postForObject(lightSensorUrl, request, LightDataAcquisition.class);
+ 
 	    
 	    tempDataAcquisition tempData = new tempDataAcquisition(25,"degC","GEI-213");
 	    roomEnvironment newRoomInfo = new roomEnvironment(room,  lightData, tempData, "CLOSED", "OPEN","YES","ON","OFF");
 		
 		GEIroomList.addRoomToList(newRoomInfo);		
+		
+	    } catch(JSONException jex){
+	    	System.out.println(jex.toString());
+	    }
 	    
 	}
 	
