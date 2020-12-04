@@ -2397,3 +2397,487 @@ Response in Router= ResponsePrimitive [responseStatusCode=2000,
  from=/mn-cse,
  contentType=application/xml,
 ]
+[2020-12-04 09:30:58,174 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Starting Data Mapper
+[2020-12-04 09:30:58,188 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Registering XML Mapper Service..
+[2020-12-04 09:30:59,164 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+XML Mapper service registered.
+[2020-12-04 09:30:59,164 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Registering JSON Mapper Service..
+[2020-12-04 09:30:59,522 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+JSON Mapper service registered.
+[2020-12-04 09:30:59,524 INFO] - org.eclipse.om2m.binding.http.Activator 
+Register HTTP RestClientService..
+[2020-12-04 09:30:59,575 INFO] - org.eclipse.om2m.binding.http.Activator 
+HTTP RestClientService is registered.
+[2020-12-04 09:30:59,581 INFO] - org.eclipse.om2m.binding.http.Activator 
+HttpService discovered
+[2020-12-04 09:30:59,585 INFO] - org.eclipse.om2m.binding.http.Activator 
+Register / context
+[2020-12-04 09:30:59,591 INFO] - org.eclipse.om2m.persistence.eclipselink.Activator 
+Starting Persistence JPA plugin...
+[2020-12-04 09:30:59,595 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+Initializing Database...
+[2020-12-04 09:30:59,599 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+Creating new EntityManagerFactory...
+[2020-12-04 09:30:59,712 INFO] - org.eclipse.om2m.core.Activator 
+Starting CSE...
+[2020-12-04 09:30:59,713 INFO] - org.eclipse.om2m.core.Activator 
+Added Data Mapper Service: application/xml
+[2020-12-04 09:30:59,714 INFO] - org.eclipse.om2m.core.Activator 
+Added Data Mapper Service: application/json
+[2020-12-04 09:30:59,715 INFO] - org.eclipse.om2m.core.Activator 
+Rest client service discovered. Protocol: http
+[2020-12-04 09:30:59,719 INFO] - org.eclipse.om2m.webapp.resourcesbrowser.xml.Activator 
+HttpService discovered
+[2020-12-04 09:30:59,720 INFO] - org.eclipse.om2m.webapp.resourcesbrowser.xml.Activator 
+Register /webpage http context
+[2020-12-04 09:31:01,444 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+DataBase initialized.
+[2020-12-04 09:31:01,461 INFO] - org.eclipse.om2m.persistence.eclipselink.Activator 
+Registering Database (JPA-EL) Service
+[2020-12-04 09:31:01,462 INFO] - org.eclipse.om2m.core.Activator 
+DataBase persistence service discovered
+[2020-12-04 09:31:01,465 INFO] - org.eclipse.om2m.core.thread.CoreExecutor 
+Creating thread pool with corePoolSize=5 & maximumSize=50
+[2020-12-04 09:31:01,479 INFO] - org.eclipse.om2m.core.CSEInitializer 
+Initializating the cseBase
+[2020-12-04 09:31:01,504 INFO] - org.eclipse.om2m.core.CSEInitializer 
+cseBase already initialized
+[2020-12-04 09:31:01,504 INFO] - org.eclipse.om2m.core.Activator 
+Registering CseService...
+[2020-12-04 09:31:01,516 INFO] - org.eclipse.om2m.binding.http.Activator 
+CseService discovered
+[2020-12-04 09:31:01,516 INFO] - org.eclipse.om2m.core.Activator 
+CSE Started
+[2020-12-04 09:31:21,010 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2020-12-04 09:31:21,014 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse,
+ resultContent=5,
+ ]
+[2020-12-04 09:31:21,016 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2020-12-04 09:31:21,016 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2020-12-04 09:31:21,017 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2020-12-04 09:31:21,018 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2020-12-04 09:31:21,020 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse
+[2020-12-04 09:31:21,023 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [CSEBaseController]
+[2020-12-04 09:31:21,077 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cb xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-name">
+   <ty>5</ty>
+   <ri>/mn-cse</ri>
+   <ct>20201126T151401</ct>
+   <lt>20201126T151401</lt>
+   <acpi>/mn-cse/acp-224641201</acpi>
+   <cst>1</cst>
+   <csi>mn-cse</csi>
+   <srt>1 2 3 4 5 9 14 15 16 17 23</srt>
+   <poa>http://127.0.0.1:8282/</poa>
+   <ch rn="acp_admin" ty="1">/mn-cse/acp-224641201</ch>
+   <ch rn="acpae-427197276" ty="1">/mn-cse/acp-133640809</ch>
+   <ch rn="LightSensor" ty="2">/mn-cse/CAE427197276</ch>
+   <ch rn="in-name" ty="16">/mn-cse/csr-683180068</ch>
+</m2m:cb>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2020-12-04 09:31:24,210 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2020-12-04 09:31:24,210 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE427197276,
+ resultContent=5,
+ ]
+[2020-12-04 09:31:24,211 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2020-12-04 09:31:24,215 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2020-12-04 09:31:24,215 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2020-12-04 09:31:24,218 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE427197276,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2020-12-04 09:31:24,218 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/CAE427197276
+[2020-12-04 09:31:24,220 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2020-12-04 09:31:24,241 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="LightSensor">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE427197276</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201126T152425</ct>
+   <lt>20201126T152425</lt>
+   <lbl>Category/light Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-133640809</acpi>
+   <et>20211126T152425</et>
+   <api>app-sensor</api>
+   <aei>CAE427197276</aei>
+   <ch rn="DATA" ty="3">/mn-cse/cnt-542822182</ch>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-904851684</ch>
+   <rr>false</rr>
+</m2m:ae>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2020-12-04 09:44:31,264 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2020-12-04 09:44:31,265 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-542822182,
+ resultContent=5,
+ ]
+[2020-12-04 09:44:31,272 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2020-12-04 09:44:31,273 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2020-12-04 09:44:31,274 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2020-12-04 09:44:31,276 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-542822182,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2020-12-04 09:44:31,279 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cnt-542822182
+[2020-12-04 09:44:31,280 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2020-12-04 09:44:31,295 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DATA">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-542822182</ri>
+   <pi>/mn-cse/CAE427197276</pi>
+   <ct>20201126T152846</ct>
+   <lt>20201126T152846</lt>
+   <acpi>/mn-cse/acp-133640809</acpi>
+   <et>20211126T152846</et>
+   <st>1</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>1</cni>
+   <cbs>147</cbs>
+   <ch rn="cin_404564052" ty="4">/mn-cse/cin-404564052</ch>
+   <ol>/mn-cse/mn-name/LightSensor/DATA/ol</ol>
+   <la>/mn-cse/mn-name/LightSensor/DATA/la</la>
+</m2m:cnt>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2020-12-04 09:44:36,474 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2020-12-04 09:44:36,475 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-404564052,
+ resultContent=5,
+ ]
+[2020-12-04 09:44:36,476 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2020-12-04 09:44:36,479 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2020-12-04 09:44:36,481 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2020-12-04 09:44:36,482 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-404564052,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2020-12-04 09:44:36,482 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cin-404564052
+[2020-12-04 09:44:36,483 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2020-12-04 09:44:36,510 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_404564052">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-404564052</ri>
+   <pi>/mn-cse/cnt-542822182</pi>
+   <ct>20201126T153225</ct>
+   <lt>20201126T153225</lt>
+   <st>0</st>
+   <cnf>message</cnf>
+   <cs>147</cs>
+   <con>
+      &lt;obj>
+        &lt;str name=&quot;value&quot; val=&quot;25 &quot;/>
+        &lt;int name=&quot;unit&quot; val=&quot;degC&quot;/>
+        &lt;int name=&quot;room&quot; val=&quot;GEI-213&quot;/>
+      &lt;/obj>
+    </con>
+</m2m:cin>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2020-12-04 10:04:23,456 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2020-12-04 10:04:23,456 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=mn-cse/mn-name/LightSensor/DATA,
+ content={"unit":"Lux","Value":150,"Room":"GEI-213"}
+,
+ ]
+[2020-12-04 10:04:23,458 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/json
+[2020-12-04 10:04:23,458 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/json
+[2020-12-04 10:04:23,468 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/json, application/*+json
+[2020-12-04 10:04:23,470 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=mn-cse/mn-name/LightSensor/DATA,
+ content={"unit":"Lux","Value":150,"Room":"GEI-213"}
+,
+ returnContentType=application/json,
+ requestContentType=application/json,
+ queryStrings={}]
+[2020-12-04 10:04:23,470 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: mn-cse/mn-name/LightSensor/DATA
+[2020-12-04 10:04:23,475 INFO] - org.eclipse.om2m.core.router.Router 
+OM2M exception caught in Router: AE resource /mn-cse/mn-cse/mn-name/LightSensor/DATA not found.
+[2020-12-04 10:04:23,475 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=4004,
+ content=AE resource /mn-cse/mn-cse/mn-name/LightSensor/DATA not found.,
+ from=/mn-cse,
+ contentType=text/plain,
+]
+[2020-12-04 10:06:12,993 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2020-12-04 10:06:12,993 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse,
+ resultContent=5,
+ ]
+[2020-12-04 10:06:12,994 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2020-12-04 10:06:12,998 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2020-12-04 10:06:12,998 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2020-12-04 10:06:13,000 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2020-12-04 10:06:13,002 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse
+[2020-12-04 10:06:13,002 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [CSEBaseController]
+[2020-12-04 10:06:13,009 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cb xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-name">
+   <ty>5</ty>
+   <ri>/mn-cse</ri>
+   <ct>20201126T151401</ct>
+   <lt>20201126T151401</lt>
+   <acpi>/mn-cse/acp-224641201</acpi>
+   <cst>1</cst>
+   <csi>mn-cse</csi>
+   <srt>1 2 3 4 5 9 14 15 16 17 23</srt>
+   <poa>http://127.0.0.1:8282/</poa>
+   <ch rn="acp_admin" ty="1">/mn-cse/acp-224641201</ch>
+   <ch rn="acpae-427197276" ty="1">/mn-cse/acp-133640809</ch>
+   <ch rn="LightSensor" ty="2">/mn-cse/CAE427197276</ch>
+   <ch rn="in-name" ty="16">/mn-cse/csr-683180068</ch>
+</m2m:cb>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2020-12-04 10:06:15,467 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2020-12-04 10:06:15,468 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE427197276,
+ resultContent=5,
+ ]
+[2020-12-04 10:06:15,469 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2020-12-04 10:06:15,472 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2020-12-04 10:06:15,473 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2020-12-04 10:06:15,474 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE427197276,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2020-12-04 10:06:15,475 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/CAE427197276
+[2020-12-04 10:06:15,475 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2020-12-04 10:06:15,482 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="LightSensor">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE427197276</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201126T152425</ct>
+   <lt>20201126T152425</lt>
+   <lbl>Category/light Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-133640809</acpi>
+   <et>20211126T152425</et>
+   <api>app-sensor</api>
+   <aei>CAE427197276</aei>
+   <ch rn="DATA" ty="3">/mn-cse/cnt-542822182</ch>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-904851684</ch>
+   <rr>false</rr>
+</m2m:ae>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2020-12-04 10:07:36,784 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2020-12-04 10:07:36,784 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/LightSensor/DATA,
+ content={"unit":"Lux","Value":150,"Room":"GEI-213"}
+,
+ ]
+[2020-12-04 10:07:36,786 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/json
+[2020-12-04 10:07:36,789 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/json
+[2020-12-04 10:07:36,790 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/json, application/*+json
+[2020-12-04 10:07:36,791 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/LightSensor/DATA,
+ content={"unit":"Lux","Value":150,"Room":"GEI-213"}
+,
+ returnContentType=application/json,
+ requestContentType=application/json,
+ queryStrings={}]
+[2020-12-04 10:07:36,792 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/LightSensor/DATA
+[2020-12-04 10:07:36,795 INFO] - org.eclipse.om2m.core.router.Router 
+OM2M exception caught in Router: AE resource /mn-cse/cnt-542822182 not found.
+[2020-12-04 10:07:36,796 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=4004,
+ content=AE resource /mn-cse/cnt-542822182 not found.,
+ from=/mn-cse,
+ contentType=text/plain,
+]
+[2020-12-04 10:08:16,035 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2020-12-04 10:08:16,036 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-542822182,
+ resultContent=5,
+ ]
+[2020-12-04 10:08:16,037 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2020-12-04 10:08:16,041 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2020-12-04 10:08:16,042 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2020-12-04 10:08:16,043 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-542822182,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2020-12-04 10:08:16,045 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cnt-542822182
+[2020-12-04 10:08:16,045 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2020-12-04 10:08:16,052 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DATA">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-542822182</ri>
+   <pi>/mn-cse/CAE427197276</pi>
+   <ct>20201126T152846</ct>
+   <lt>20201126T152846</lt>
+   <acpi>/mn-cse/acp-133640809</acpi>
+   <et>20211126T152846</et>
+   <st>1</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>1</cni>
+   <cbs>147</cbs>
+   <ch rn="cin_404564052" ty="4">/mn-cse/cin-404564052</ch>
+   <ol>/mn-cse/mn-name/LightSensor/DATA/ol</ol>
+   <la>/mn-cse/mn-name/LightSensor/DATA/la</la>
+</m2m:cnt>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2020-12-04 10:09:31,565 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2020-12-04 10:09:31,567 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-542822182,
+ content={"unit":"Lux","Value":150,"Room":"GEI-213"}
+,
+ ]
+[2020-12-04 10:09:31,570 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/json
+[2020-12-04 10:09:31,577 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/json
+[2020-12-04 10:09:31,581 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/json
+[2020-12-04 10:09:31,583 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/cnt-542822182,
+ content={"unit":"Lux","Value":150,"Room":"GEI-213"}
+,
+ returnContentType=application/json,
+ requestContentType=application/json,
+ queryStrings={}]
+[2020-12-04 10:09:31,586 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cnt-542822182
+[2020-12-04 10:09:31,588 INFO] - org.eclipse.om2m.core.router.Router 
+OM2M exception caught in Router: AE resource /mn-cse/cnt-542822182 not found.
+[2020-12-04 10:09:31,588 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=4004,
+ content=AE resource /mn-cse/cnt-542822182 not found.,
+ from=/mn-cse,
+ contentType=text/plain,
+]
