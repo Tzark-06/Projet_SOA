@@ -1,0 +1,57 @@
+@startuml
+
+title SOA Project - Class Diagram
+
+
+class switch {
+  -String switchState
+  -String room
+  +switchModel()
+  +switchModel(int state, String room)
+}
+
+class window{
+  -String windowState
+  -String room
+  +windowModel ()
+  +windowModel(int state, String room)
+}
+
+class alarm{
+  -String room
+  -String alarmstate
+  +AlarmAcquisition(String room, String alarmState)
+}
+class presence{
+  -String presenceState
+  -String room
+  +presenceModel()
+  +presenceModel(int value, String room)
+}
+class temperature{
+  -double value
+  -String unit
+  -String room
+  +tempDataAcquisition() 
+  +tempDataAcquisition(double value, String unit, String roomName) 
+}
+class light{
+  -int value
+  -String unit
+  -String room
+  +LightDataAcquisition()
+  +LightDataAcquisition(int value, String unit, String roomName)
+}
+class roomEnvironment{
+  -String roomName
+  -LightDataAcquisition light
+  -tempDatatAcquisition temp
+  -String windowState
+  -String doorsState
+  -String presence
+  -String switchLight
+  -String alarmState
+  +roomEnvironment(String roomName, LightDataAcquisition light, tempDataAcquisition temp, String windowsState, 
+			String doorsState, String presence, String switchLight, String alarmState)
+}
+@enduml
