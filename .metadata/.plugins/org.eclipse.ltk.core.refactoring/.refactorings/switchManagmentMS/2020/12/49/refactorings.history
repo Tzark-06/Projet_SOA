@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;switchModel.java&apos; to &apos;RoomManagementWS/src/main/java/fr.insa.soa.RoomManagementWS.model&apos;&#x0D;&#x0A;- Original project: &apos;switchManagmentMS&apos;&#x0D;&#x0A;- Destination element: &apos;RoomManagementWS/src/main/java/fr.insa.soa.RoomManagementWS.model&apos;&#x0D;&#x0A;- Original element: &apos;fr.insa.mas.switchManagmentMS.model.switchModel.java&apos;" description="Copy compilation unit" destination="=RoomManagementWS/src\/main\/java&lt;fr.insa.soa.RoomManagementWS.model" element1="/src\/main\/java&lt;fr.insa.mas.switchManagmentMS.model{switchModel.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1607187866120" units="1" version="1.0"/>
+</session>

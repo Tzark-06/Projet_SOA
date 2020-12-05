@@ -4,8 +4,6 @@ package fr.insa.soa.RoomManagementWS.model;
 public class roomEnvironment {
 	
 	private String roomName;
-	//private int lightValue;
-	//private double tempValue;
 	private LightDataAcquisition light;
 	private tempDataAcquisition temp;
 	private String windowsState;	// 2 values: "OPEN", "CLOSED"
