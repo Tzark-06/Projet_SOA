@@ -6,7 +6,7 @@ var btn = document.querySelector('input');
 
 btn.addEventListener('click', sendSensorDataRoom);
 
-function getRandomInt(max) {
+/*function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 function getRandomDouble(max) {
@@ -16,17 +16,22 @@ function getRandomDouble(max) {
 var light =  getRandomInt(301);          // 0 à 300 lux
 var temperature = getRandomDouble(31);   // 0 à 30°C
 var pres = getRandomInt(2);              // 0=NO ; 1=YES
+*/
 
-var baseurl = "http://localhost:8090/updateRoomInfo/";
+//var baseurl = "http://localhost:8090/updateRoomInfo/";
+var baseurl = "http://localhost:8090/update";
 
-document.getElementById("txtbtn").innerHTML = "coucou";
+
 
 function sendSensorDataRoom(){
 
+    document.getElementById("txtbtn").innerHTML = "coucou";
     var xmlhttp = new XMLHttpRequest();
     
-    xmlhttp.open("POST",baseurl + "GEI-213/" + light + "/" + temperature + "/" + pres,true);
+    //xmlhttp.open("POST",baseurl + "GEI-213/" + light + "/" + temperature + "/" + pres,true);
     //console.log(xmlhttp.responseText);
+    xmlhttp.open("POST", baseurl, true);
+    xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
     xmlhttp.onreadystatechange = function() {
         if(xmlhttp.readyState === XMLHttpRequest.DONE && xmlhttp.status === 200){ 
@@ -39,7 +44,7 @@ function sendSensorDataRoom(){
 }
 
 //btn.addEventListener('click', sendSensorDataRoom);
-/*window.onload = function(){
-sendSensorDataRoom();
-}*/
+window.onload = function(){
+    sendSensorDataRoom();
+}   
 
