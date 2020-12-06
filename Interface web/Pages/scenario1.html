@@ -3,16 +3,19 @@
     <title> Sensors Information inside the room </title>
     <meta charset="UTF-8">
     <meta http-equiv="Refresh" content="10; url=scenario1.html">
-    <script>
 
+    <script type="text/javascript" src="buttonControl.js"></script>
+    <script>
       /*Display script for the first scenario : ... */
       var baseurl = "http://localhost:8090";
+
+      document.getElementById("currentRoomInfo").innerHTML = "coucou";
 
       function loadSensorDataRoom(){
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.open("GET",baseurl + "/CurrentRoomInfo/GEI-213",true);
         xmlhttp.onreadystatechange = function() {
-          if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+          if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
             var roomInfo = JSON.parse(xmlhttp.responseText);
             
             var lightInfoStr = JSON.stringify(roomInfo.light);
@@ -46,7 +49,7 @@
 
   <!-- BODY -->
   <body>
-
+ 
     <p style="color: blue; font-size: 24px; font-family: 'Trebuchet MS'; text-align: center; margin-left: 100px; border-style: inset ; width : 500px; "> <b>Automatic GEI's rooms management</b></p>
     <img src="../Pictures/classroom.jpg" width="30%" style="margin-left: 130px;">
     <br/><br/>
@@ -56,6 +59,11 @@
     </p> <br/> <br/>
     
     <div id="currentRoomInfo" style="margin-left: 15px; font-family: 'Trebuchet MS'; text-align: center; width: 700px; border-style: outset;">  </div>
+    <br/> <br/>
+     
+    <input name="btn" type="button" value="Update room sensors">
+
+    <div id="txtbtn"> </div>
   
   </body>
 </html>
