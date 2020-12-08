@@ -52,6 +52,9 @@ public class RoomListResource {
 		
 	}
 	
-	
+	@PostMapping("/update/{str}")
+	public void updateTest(){
+		System.out.println("coucou");
+	}
 
 }

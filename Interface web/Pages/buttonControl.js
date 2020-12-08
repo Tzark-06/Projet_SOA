@@ -1,12 +1,8 @@
-/*Button used to call the POST request*/
+/***************************************************************/
+/************ Button used to call the POST request *************/
+/***************************************************************/
 
-//var btn = document.querySelector("div.POSTrequest input[name='btn]");
-var btn = document.querySelector('input');
-//var txt = document.querySelector("p.txtbtn");
-
-btn.addEventListener('click', sendSensorDataRoom);
-
-/*function getRandomInt(max) {
+function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 function getRandomDouble(max) {
@@ -16,25 +12,19 @@ function getRandomDouble(max) {
 var light =  getRandomInt(301);          // 0 à 300 lux
 var temperature = getRandomDouble(31);   // 0 à 30°C
 var pres = getRandomInt(2);              // 0=NO ; 1=YES
-*/
 
-//var baseurl = "http://localhost:8090/updateRoomInfo/";
-var baseurl = "http://localhost:8090/update";
-
-
+var baseurl = "http://localhost:8090/updateRoomInfo/";
 
 function sendSensorDataRoom(){
 
-    document.getElementById("txtbtn").innerHTML = "coucou";
     var xmlhttp = new XMLHttpRequest();
     
-    //xmlhttp.open("POST",baseurl + "GEI-213/" + light + "/" + temperature + "/" + pres,true);
-    //console.log(xmlhttp.responseText);
-    xmlhttp.open("POST", baseurl, true);
-    xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xmlhttp.open("POST",baseurl + "GEI-213/" + light + "/" + temperature + "/" + pres,true);
+
+    xmlhttp.setRequestHeader("Content-Type", "application/json");
 
     xmlhttp.onreadystatechange = function() {
-        if(xmlhttp.readyState === XMLHttpRequest.DONE && xmlhttp.status === 200){ 
+        if(xmlhttp.readyState === 4 && xmlhttp.status === 200){ 
             document.getElementById("txtbtn").innerHTML = 'Data sensors of the room are sent!';            
         } else {
             document.getElementById("txtbtn").innerHTML = 'An error occured!';  
@@ -42,9 +32,4 @@ function sendSensorDataRoom(){
     };
     xmlhttp.send();
 }
-
-//btn.addEventListener('click', sendSensorDataRoom);
-window.onload = function(){
-    sendSensorDataRoom();
-}   
 
