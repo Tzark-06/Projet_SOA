@@ -18,6 +18,73 @@ public class HTTPMethodsRoomManagement {
 	//For HTTP GET Methods 
 	
 	/* Enter your code here...*/
+	public roomEnvironment getDataFromOM2M(String myUrl, String roomName) throws IOException, JSONException{
+		roomEnvironment room = new roomEnvironment();
+		// TODO: ajouter les autres au string array, je connais pas les noms
+		String[] parameters = {"/LightSensor/DATA","/TemperatureSensor/DATA","/PresenceSensor/DATA"}; 
+		
+		for(int i = 0; i < parameters.length; i++) {
+			String newUrl = myUrl + parameters[i];
+			URL url = new URL (newUrl);
+			HttpURLConnection con = (HttpURLConnection)url.openConnection();
+			con.setRequestMethod("GET");
+			con.setDoOutput(true);	
+			//con.setRequestProperty("Content-Type", "application/json"); //besoin ?
+			con.setRequestProperty("X-M2M-Origin", "admin:admin");
+			con.setRequestProperty("Accept", "application/json");
+				
+			int responseCode = con.getResponseCode();
+			
+			if(responseCode == HttpURLConnection.HTTP_OK) {
+				BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+				String inputLine;
+				StringBuffer response = new StringBuffer();
+				
+				while((inputLine = in.readLine()) != null) {
+					response.append(inputLine);
+				}
+				
+				in.close();
+				
+				JSONObject obj = new JSONObject(response);
+				//String dataType = obj.getJSONObject("m2m:cin").getString("cnf");
+				String dataValue = obj.getJSONObject("m2m:cin").getString("con");
+				
+				switch(i) {
+				case 0:
+					int lightValue = Integer.parseInt(dataValue);
+					LightDataAcquisition light = new LightDataAcquisition(lightValue, "lux", roomName);
+					room.setLight(light);
+					break;
+				case 1:
+					double tempValue = Double.parseDouble(dataValue);
+					tempDataAcquisition temp = new tempDataAcquisition(tempValue, "deg", roomName);
+					room.setTemp(temp);
+					break;
+				case 2:
+					room.setPresence(dataValue);
+					break;
+				case 3:
+					room.setAlarmState(dataValue);
+					break;
+				case 4:
+					room.setDoorsState(dataValue);
+					break;
+				case 5:
+					room.setSwitchLight(dataValue);
+					break;
+				case 6:
+					room.setWindowsState(dataValue);
+					break;
+				}
+				
+			}
+				
+		}
+
+		return room;
+				
+	}
 	
 	
 	//For HTTP POST Methods 
