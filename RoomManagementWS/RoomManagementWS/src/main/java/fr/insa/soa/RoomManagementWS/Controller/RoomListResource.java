@@ -35,7 +35,19 @@ public class RoomListResource {
 	
 	private HTTPMethodsRoomManagement httpController = new HTTPMethodsRoomManagement();
 	
-	
+	@GetMapping ("/getRoomInfo/{room}")
+	public void changeEnvironment(@PathVariable String room)throws IOException, JSONException {
+		roomEnvironment roomObj = new roomEnvironment();
+		room = httpController.getDataFromOM2M(roomEnvironmentUrl, room);
+		
+		//Scenario 1 :
+		if(roomObj.getTemp > 25){
+		  roomObj.setWindowState("OPEN");
+		  httpController.sendDataToOM2M(windowUrl, "", "OPEN");
+		 } 
+		
+    }
+    
 	
 	
 	@PostMapping("/updateRoomInfo/{room}/{light}/{temp}/{presence}")
