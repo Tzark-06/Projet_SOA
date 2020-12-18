@@ -2,17 +2,24 @@ TODO:
 
 ¤ Report (architecture, diagramme d'interaction/classe/use case <-> services <-> interface web)
 
+  Screen de 1 sprint de JIRA
+  Diagramme de classe
+  Tests
+
+
+
 /******************************************* A LIRE **********************************************/
 Mettre Vi pour Victor et Va pour Valentin dans les crochets pour les tâches que vous devez vous répartir
 /******************************************* ****** **********************************************/
 
 [TZ] Méthode POST dans la classe HTTPMethodsRoomManagement
-[  ] Méthode GET dans la classe HTTPMethodsRoomManagement (hypo: récupérer un JSON et le parse pour récupérer les infos utiles...)         
+[VL] Méthode GET dans la classe HTTPMethodsRoomManagement (hypo: récupérer un JSON et le parse pour récupérer les infos utiles...)         
 [TZ] création des sensors/actuators dans OM2M avec les cnt
 [  ] implémenter le scénario 1 en Java (en fonction des traitements faire la MAJ de l'état des actionneurs dans OM2M)
 [  ] implémenter le scénario 2 en Java (en fonction des traitements faire la MAJ de l'état des actionneurs dans OM2M)
 [TZ] interface web pour le display des GET
 [TZ] interface web POST
+
 
 
 
