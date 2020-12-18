@@ -32,19 +32,44 @@ public class RoomListResource {
 	private String lightSensorUrl = "http://localhost:8282/~/mn-cse/mn-name/LightSensor/DATA";
 	private String tempSensorUrl = "http://localhost:8282/~/mn-cse/mn-name/TemperatureSensor/DATA";
 	private String presenceSensorUrl = "http://localhost:8282/~/mn-cse/mn-name/PresenceSensor/DATA";
+	private String switchLightUrl = "http://localhost:8282/~/mn-cse/mn-name/LightSwitchActuator/DATA";
+	private String windowActuatorUrl = "http://localhost:8282/~/mn-cse/mn-name/windowActuator/DATA";
 	
 	private HTTPMethodsRoomManagement httpController = new HTTPMethodsRoomManagement();
 	
-	@GetMapping ("/getRoomInfo/{room}")
-	public void changeEnvironment(@PathVariable String room)throws IOException, JSONException {
+	@GetMapping ("/getRoomInfo/{room}/{scenario}")
+	public void changeEnvironment(@PathVariable String room, @PathVariable int scenario)throws IOException, JSONException {
 		roomEnvironment roomObj = new roomEnvironment();
 		room = httpController.getDataFromOM2M(roomEnvironmentUrl, room);
 		
 		//Scenario 1 :
-		if(roomObj.getTemp > 25){
-		  roomObj.setWindowState("OPEN");
-		  httpController.sendDataToOM2M(windowUrl, "", "OPEN");
-		 } 
+		if(scenario == 1) {
+			if(roomObj.getTemp() > 25 && roomObj.getWindowsState() == "CLOSED"){
+			  roomObj.setWindowState("OPEN");
+			  httpController.sendDataToOM2M(windowActuatorUrl, "", "OPEN");
+			 } else if(roomObj.getTemp < 18 && roomObj.getWindowsState() == "OPEN"){
+			  roomObj.setWindowState("CLOSED");
+			  httpController.sendDataToOM2M(windowActuatorUrl, "", "CLOSED");
+			 }
+
+			if(roomObj.getPresence == "YES") {
+				roomObj.setSwitchLight("ON");
+				httpController.sendDataToOM2M(switchLightUrl, "", "ON");
+			}else if(roomObj.getPresence == "NO") {
+				roomObj.setSwitchLight("OFF");
+				httpController.sendDataToOM2M(switchLightUrl, "", "OFF");
+			}
+			
+		}else if(scenario == 2){
+			
+			if(roomObj.getPresence == "NO" && roomObj.getWindowsState() == "OPEN") {
+				roomObj.setWindowState("CLOSED");
+				httpController.sendDataToOM2M(windowActuatorUrl, "", "CLOSED");
+			}
+			
+			
+			
+		}
 		
     }
     
