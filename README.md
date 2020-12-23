@@ -1,15 +1,17 @@
 # Automatic GEI's rooms management 
 
+---
 ## Team
-Thomas Zennaro
-Victor Le Roch
-Valentin Licini
+Thomas Zennaro <br/>
+Victor Le Roch <br/>
+Valentin Licini 
 
+---
 ## Description 
 We develop a Web application (Proof-of-Concept) for managing  GEI's rooms. This application allows some actions inside a room without the intervention of a human. For instance, our application is able to open and close of doors, windows, turn on/off room lighting...
 For that, we implement services for the different sensors and actuators. We retrieve data from sensors and analyze them to enable setting actuators. 
 
-
+---
 ## Project Content 
 
 ### RoomManagementWS folder
@@ -29,10 +31,10 @@ For that, we implement services for the different sensors and actuators. We retr
 
 ### OM2M
 - start the IN-CSE "start" located at .\OM2M_rooms\OM2M_rooms\in-cse
-- Open the web page of OM2M :
-  ¤ http://localhost:8080/webpage
-  ¤ id = admin
-  ¤ password = admin
+- Open the web page of OM2M : <br/>
+  ¤ http://localhost:8080/webpage <br/>
+  ¤ id = admin <br/>
+  ¤ password = admin <br/>
 - start the MN-CSE "start" located at .\OM2M_rooms\OM2M_rooms\mn-cse
 
 ### Application under Eclispe
