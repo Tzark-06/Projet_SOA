@@ -35,39 +35,35 @@ public class RoomListResource {
 	private String switchLightUrl = "http://localhost:8282/~/mn-cse/mn-name/LightSwitchActuator/DATA";
 	private String windowActuatorUrl = "http://localhost:8282/~/mn-cse/mn-name/windowActuator/DATA";
 	
-	private String roomEnvironmentUrl = "http://localhost:8282/~/mn-cse/mn-name";
-	
 	private HTTPMethodsRoomManagement httpController = new HTTPMethodsRoomManagement();
 	
 	@GetMapping ("/getRoomInfo/{room}/{scenario}")
 	public void changeEnvironment(@PathVariable String room, @PathVariable int scenario)throws IOException, JSONException {
 		roomEnvironment roomObj = new roomEnvironment();
-		roomObj = httpController.getDataFromOM2M(roomEnvironmentUrl, room);
+		room = httpController.getDataFromOM2M(roomEnvironmentUrl, room);
 		
 		//Scenario 1 :
 		if(scenario == 1) {
-			if(roomObj.getTemp().getValue() > 25 && roomObj.getWindowsState() == "CLOSED"){
-			  roomObj.setWindowsState("OPEN");
+			if(roomObj.getTemp() > 25 && roomObj.getWindowsState() == "CLOSED"){
+			  roomObj.setWindowState("OPEN");
 			  httpController.sendDataToOM2M(windowActuatorUrl, "", "OPEN");
-			 } else if(roomObj.getTemp().getValue() < 18 && roomObj.getWindowsState() == "OPEN"){
-			  roomObj.setWindowsState("CLOSED");
+			 } else if(roomObj.getTemp < 18 && roomObj.getWindowsState() == "OPEN"){
+			  roomObj.setWindowState("CLOSED");
 			  httpController.sendDataToOM2M(windowActuatorUrl, "", "CLOSED");
 			 }
 
-			if(roomObj.getPresence() == "YES") {
+			if(roomObj.getPresence == "YES") {
 				roomObj.setSwitchLight("ON");
 				httpController.sendDataToOM2M(switchLightUrl, "", "ON");
-			}else if(roomObj.getPresence() == "NO") {
+			}else if(roomObj.getPresence == "NO") {
 				roomObj.setSwitchLight("OFF");
 				httpController.sendDataToOM2M(switchLightUrl, "", "OFF");
 			}
-		
-		}
-		//Scenario 2:
-		else if(scenario == 2){
 			
-			if(roomObj.getPresence() == "NO" && roomObj.getWindowsState() == "OPEN") {
-				roomObj.setWindowsState("CLOSED");
+		}else if(scenario == 2){
+			
+			if(roomObj.getPresence == "NO" && roomObj.getWindowsState() == "OPEN") {
+				roomObj.setWindowState("CLOSED");
 				httpController.sendDataToOM2M(windowActuatorUrl, "", "CLOSED");
 			}
 			

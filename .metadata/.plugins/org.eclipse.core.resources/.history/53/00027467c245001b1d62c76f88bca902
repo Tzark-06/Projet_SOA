@@ -61,13 +61,11 @@ public class RoomListResource {
 				roomObj.setSwitchLight("OFF");
 				httpController.sendDataToOM2M(switchLightUrl, "", "OFF");
 			}
-		
-		}
-		//Scenario 2:
-		else if(scenario == 2){
 			
-			if(roomObj.getPresence() == "NO" && roomObj.getWindowsState() == "OPEN") {
-				roomObj.setWindowsState("CLOSED");
+		}else if(scenario == 2){
+			
+			if(roomObj.getPresence == "NO" && roomObj.getWindowsState() == "OPEN") {
+				roomObj.setWindowState("CLOSED");
 				httpController.sendDataToOM2M(windowActuatorUrl, "", "CLOSED");
 			}
 			

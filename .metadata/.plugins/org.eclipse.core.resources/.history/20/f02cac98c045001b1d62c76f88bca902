@@ -12,10 +12,6 @@ public class roomEnvironment {
 	private String switchLight; 	//2 values: "ON", "OFF"
 	private String alarmState;
 	
-	public roomEnvironment(){
-		super();
-	}
-	
 	public roomEnvironment(String roomName, LightDataAcquisition light, tempDataAcquisition temp, String windowsState, 
 			String doorsState, String presence, String switchLight, String alarmState) {
 		super();
