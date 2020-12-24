@@ -6,7 +6,7 @@ var baseurl = "http://localhost:8090";
 
       function loadSensorDataRoom(){
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET",baseurl + "/CurrentRoomInfo/GEI-213",true);  //TODO
+        xmlhttp.open("GET",baseurl + "/getRoomInfo/GEI-213/1",true);  //TODO
         xmlhttp.onreadystatechange = function() {
           if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
             var roomInfo = JSON.parse(xmlhttp.responseText);
