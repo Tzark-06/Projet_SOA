@@ -20,7 +20,7 @@ public class HTTPMethodsRoomManagement {
 	/* Enter your code here...*/
 	public roomEnvironment getDataFromOM2M(String myUrl, String roomName) throws IOException, JSONException{
 		roomEnvironment room = new roomEnvironment();
-		// TODO: ajouter les autres au string array, je connais pas les noms
+		
 		String[] parameters = {"/LightSensor/DATA","/TemperatureSensor/DATA","/PresenceSensor/DATA", "Alarm/DATA", "DoorActuator/DATA", "LightSwitchActuator", "WindowActuator"}; 
 		
 		for(int i = 0; i < parameters.length; i++) {
@@ -46,36 +46,36 @@ public class HTTPMethodsRoomManagement {
 				
 				in.close();
 				
-				JSONObject obj = new JSONObject(response);
+				JSONObject obj = new JSONObject(response.toString());
 				//String dataType = obj.getJSONObject("m2m:cin").getString("cnf");
 				String dataValue = obj.getJSONObject("m2m:cin").getString("con");
 				
 				switch(i) {
-				case 0:
-					int lightValue = Integer.parseInt(dataValue);
-					LightDataAcquisition light = new LightDataAcquisition(lightValue, "lux", roomName);
-					room.setLight(light);
-					break;
-				case 1:
-					double tempValue = Double.parseDouble(dataValue);
-					tempDataAcquisition temp = new tempDataAcquisition(tempValue, "deg", roomName);
-					room.setTemp(temp);
-					break;
-				case 2:
-					room.setPresence(dataValue);
-					break;
-				case 3:
-					room.setAlarmState(dataValue);
-					break;
-				case 4:
-					room.setDoorsState(dataValue);
-					break;
-				case 5:
-					room.setSwitchLight(dataValue);
-					break;
-				case 6:
-					room.setWindowsState(dataValue);
-					break;
+					case 0:
+						int lightValue = Integer.parseInt(dataValue);
+						LightDataAcquisition light = new LightDataAcquisition(lightValue, "lux", roomName);
+						room.setLight(light);
+						break;
+					case 1:
+						double tempValue = Double.parseDouble(dataValue);
+						tempDataAcquisition temp = new tempDataAcquisition(tempValue, "deg", roomName);
+						room.setTemp(temp);
+						break;
+					case 2:
+						room.setPresence(dataValue);
+						break;
+					case 3:
+						room.setAlarmState(dataValue);
+						break;
+					case 4:
+						room.setDoorsState(dataValue);
+						break;
+					case 5:
+						room.setSwitchLight(dataValue);
+						break;
+					case 6:
+						room.setWindowsState(dataValue);
+						break;
 				}
 				
 			}
