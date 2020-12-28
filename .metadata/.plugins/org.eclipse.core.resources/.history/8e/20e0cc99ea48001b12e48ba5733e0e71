@@ -46,9 +46,8 @@ public class HTTPMethodsRoomManagement {
 				
 				in.close();
 				
-				System.out.println(response.toString());
-				
 				JSONObject obj = new JSONObject(response.toString());
+				System.out.println(obj);
 				//String dataType = obj.getJSONObject("m2m:cin").getString("cnf");
 				String dataValue = obj.getJSONObject("m2m:cin").getString("con");
 				
