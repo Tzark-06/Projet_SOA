@@ -24,7 +24,7 @@ public class HTTPMethodsRoomManagement {
 		String[] parameters = {"/LightSensor/DATA","/TemperatureSensor/DATA","/PresenceSensor/DATA", "Alarm/DATA", "DoorActuator/DATA", "LightSwitchActuator", "WindowActuator"}; 
 		
 		for(int i = 0; i < parameters.length; i++) {
-			String newUrl = myUrl + parameters[i];
+			String newUrl = myUrl + parameters[i] + "/la";
 			URL url = new URL (newUrl);
 			HttpURLConnection con = (HttpURLConnection)url.openConnection();
 			con.setRequestMethod("GET");
