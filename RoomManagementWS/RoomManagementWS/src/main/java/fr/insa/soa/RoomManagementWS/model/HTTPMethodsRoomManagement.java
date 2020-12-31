@@ -21,7 +21,7 @@ public class HTTPMethodsRoomManagement {
 	public roomEnvironment getDataFromOM2M(String myUrl, String roomName) throws IOException, JSONException{
 		roomEnvironment room = new roomEnvironment();
 		
-		String[] parameters = {"/LightSensor/DATA","/TemperatureSensor/DATA","/PresenceSensor/DATA", "Alarm/DATA", "DoorActuator/DATA", "LightSwitchActuator", "WindowActuator"}; 
+		String[] parameters = {"/LightSensor/DATA","/TemperatureSensor/DATA","/PresenceSensor/DATA", "Alarm/STATE", "DoorActuator/STATE", "LightSwitchActuator/STATE", "WindowActuator/STATE"}; 
 		
 		for(int i = 0; i < parameters.length; i++) {
 			String newUrl = myUrl + parameters[i] + "/la";
