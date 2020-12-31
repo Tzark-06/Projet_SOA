@@ -1,6 +1,0 @@
-JFLAGS = -g
-JC = javac
-OPT = -O3
-#OPT = -g
-WARN = -Wall
-
