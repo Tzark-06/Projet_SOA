@@ -29,11 +29,14 @@ import org.json.JSONException;
 @RestController
 public class RoomListResource {
 	
+	//Sensors and actuators addresses inside the OM2M platform
 	private String lightSensorUrl = "http://localhost:8282/~/mn-cse/mn-name/LightSensor/DATA";
 	private String tempSensorUrl = "http://localhost:8282/~/mn-cse/mn-name/TemperatureSensor/DATA";
 	private String presenceSensorUrl = "http://localhost:8282/~/mn-cse/mn-name/PresenceSensor/DATA";
-	private String switchLightUrl = "http://localhost:8282/~/mn-cse/mn-name/LightSwitchActuator/DATA";
-	private String windowActuatorUrl = "http://localhost:8282/~/mn-cse/mn-name/windowActuator/DATA";
+	private String switchLightUrl = "http://localhost:8282/~/mn-cse/mn-name/LightSwitchActuator/STATE";
+	private String windowActuatorUrl = "http://localhost:8282/~/mn-cse/mn-name/windowActuator/STATE";
+	private String doorActuatorUrl = "http://localhost:8282/~/mn-cse/mn-name/DoorActuator/STATE";
+	private String alarmUrl = "http://localhost:8282/~/mn-cse/mn-name/Alarm/STATE";
 	
 	private String roomEnvironmentUrl = "http://localhost:8282/~/mn-cse/mn-name";
 	
@@ -43,7 +46,7 @@ public class RoomListResource {
 	public roomEnvironment changeEnvironment(@PathVariable String room, @PathVariable int scenario) throws IOException, JSONException {
 		roomEnvironment roomObj = new roomEnvironment();
 		roomObj = httpController.getDataFromOM2M(roomEnvironmentUrl, room);
-		
+				
 		roomObj.setRoomName(room);
 		
 		//Scenario 1 :
@@ -65,20 +68,20 @@ public class RoomListResource {
 			}
 		
 		}
+		
 		//Scenario 2 :
 		else if(scenario == 2){
 			
 			if(roomObj.getPresence() == "NO" && roomObj.getWindowsState() == "OPEN") {
+				roomObj.setAlarmState("OFF");
+				httpController.sendDataToOM2M(alarmUrl, "", "OFF");
 				roomObj.setWindowsState("CLOSED");
 				httpController.sendDataToOM2M(windowActuatorUrl, "", "CLOSED");
 			}
 			
-			
-			
 		}
 		
 		return roomObj;
-		
     }
     
 	

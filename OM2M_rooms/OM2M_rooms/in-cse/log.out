@@ -28771,3 +28771,4686 @@ ResponsePrimitive [responseStatusCode=2000,
  from=/in-cse,
  contentType=application/xml;charset=ISO-8859-1,
 ]
+[2021-01-01 10:47:05,446 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Starting Data Mapper
+[2021-01-01 10:47:05,462 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Registering XML Mapper Service..
+[2021-01-01 10:47:06,982 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+XML Mapper service registered.
+[2021-01-01 10:47:06,992 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Registering JSON Mapper Service..
+[2021-01-01 10:47:07,779 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+JSON Mapper service registered.
+[2021-01-01 10:47:07,910 INFO] - org.eclipse.om2m.binding.coap.Activator 
+Register CoAP RestClientService..
+[2021-01-01 10:47:07,920 INFO] - org.eclipse.om2m.binding.coap.Activator 
+Starting CoAP server
+[2021-01-01 10:47:07,991 INFO] - org.eclipse.om2m.binding.coap.Activator 
+CseService opened
+[2021-01-01 10:47:07,999 INFO] - org.eclipse.om2m.binding.http.Activator 
+Register HTTP RestClientService..
+[2021-01-01 10:47:08,061 INFO] - org.eclipse.om2m.binding.http.Activator 
+HTTP RestClientService is registered.
+[2021-01-01 10:47:08,069 INFO] - org.eclipse.om2m.binding.http.Activator 
+HttpService discovered
+[2021-01-01 10:47:08,071 INFO] - org.eclipse.om2m.persistence.eclipselink.Activator 
+Starting Persistence JPA plugin...
+[2021-01-01 10:47:08,080 INFO] - org.eclipse.om2m.binding.http.Activator 
+Register / context
+[2021-01-01 10:47:08,082 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+Initializing Database...
+[2021-01-01 10:47:08,090 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+Creating new EntityManagerFactory...
+[2021-01-01 10:47:08,232 INFO] - org.eclipse.om2m.core.Activator 
+Starting CSE...
+[2021-01-01 10:47:08,303 INFO] - org.eclipse.om2m.core.Activator 
+Added Data Mapper Service: application/xml
+[2021-01-01 10:47:08,313 INFO] - org.eclipse.om2m.core.Activator 
+Added Data Mapper Service: application/json
+[2021-01-01 10:47:08,333 INFO] - org.eclipse.om2m.core.Activator 
+Rest client service discovered. Protocol: coap
+[2021-01-01 10:47:08,333 INFO] - org.eclipse.om2m.core.Activator 
+Rest client service discovered. Protocol: http
+[2021-01-01 10:47:08,333 INFO] - org.eclipse.om2m.webapp.resourcesbrowser.xml.Activator 
+HttpService discovered
+[2021-01-01 10:47:08,341 INFO] - org.eclipse.om2m.webapp.resourcesbrowser.xml.Activator 
+Register /webpage http context
+[2021-01-01 10:47:10,630 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+DataBase initialized.
+[2021-01-01 10:47:10,650 INFO] - org.eclipse.om2m.persistence.eclipselink.Activator 
+Registering Database (JPA-EL) Service
+[2021-01-01 10:47:10,650 INFO] - org.eclipse.om2m.core.Activator 
+DataBase persistence service discovered
+[2021-01-01 10:47:10,659 INFO] - org.eclipse.om2m.core.thread.CoreExecutor 
+Creating thread pool with corePoolSize=5 & maximumSize=50
+[2021-01-01 10:47:10,691 INFO] - org.eclipse.om2m.core.CSEInitializer 
+Initializating the cseBase
+[2021-01-01 10:47:10,719 INFO] - org.eclipse.om2m.core.CSEInitializer 
+cseBase already initialized
+[2021-01-01 10:47:10,719 INFO] - org.eclipse.om2m.core.Activator 
+Registering CseService...
+[2021-01-01 10:47:10,749 INFO] - org.eclipse.om2m.binding.coap.Activator 
+CSE Service discovered
+[2021-01-01 10:47:10,749 INFO] - org.eclipse.om2m.binding.http.Activator 
+CseService discovered
+[2021-01-01 10:47:10,749 INFO] - org.eclipse.om2m.core.Activator 
+CSE Started
+[2021-01-01 10:47:18,525 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 10:47:18,525 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/in-cse,
+ resultContent=5,
+ ]
+[2021-01-01 10:47:18,541 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 10:47:18,541 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/in-cse,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:47:18,547 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse
+[2021-01-01 10:47:18,547 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [CSEBaseController]
+[2021-01-01 10:47:18,610 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cb xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="in-name">
+   <ty>5</ty>
+   <ri>/in-cse</ri>
+   <ct>20201126T151158</ct>
+   <lt>20201126T151158</lt>
+   <acpi>/in-cse/acp-347073943</acpi>
+   <cst>1</cst>
+   <csi>in-cse</csi>
+   <srt>1 2 3 4 5 9 14 15 16 17 23</srt>
+   <poa>http://127.0.0.1:8080/</poa>
+   <ch rn="acp_admin" ty="1">/in-cse/acp-347073943</ch>
+   <ch rn="acpae-781624484" ty="1">/in-cse/acp-502184444</ch>
+   <ch rn="LightSensor" ty="2">/in-cse/CAE781624484</ch>
+   <ch rn="mn-cse" ty="16">/in-cse/csr-107533964</ch>
+</m2m:cb>
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml,
+]
+[2021-01-01 10:47:28,898 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 10:47:28,898 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/in-cse/csr-107533964,
+ resultContent=5,
+ ]
+[2021-01-01 10:47:28,905 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 10:47:28,905 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/in-cse/csr-107533964,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:47:28,905 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /in-cse/csr-107533964
+[2021-01-01 10:47:28,905 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [RemoteCSEController]
+[2021-01-01 10:47:28,920 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:csr xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-cse">
+   <ty>16</ty>
+   <ri>/in-cse/csr-107533964</ri>
+   <pi>/in-cse</pi>
+   <ct>20201126T151401</ct>
+   <lt>20201126T151401</lt>
+   <acpi>/in-cse/acp-347073943</acpi>
+   <poa>http://127.0.0.1:8282/</poa>
+   <cb>//om2m.org/mn-cse</cb>
+   <csi>/mn-cse</csi>
+   <rr>true</rr>
+</m2m:csr>
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml,
+]
+[2021-01-01 10:47:30,471 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 10:47:30,501 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse,
+ resultContent=5,
+ ]
+[2021-01-01 10:47:30,531 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 10:47:30,531 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:47:30,531 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse
+[2021-01-01 10:47:30,984 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 10:47:30,992 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:47:30,995 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:47:31,166 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 10:47:31,176 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse?rcn=5 HTTP/1.1
+[2021-01-01 10:47:31,176 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 10:47:31,439 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=4004,
+ content=<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 404 ProxyServlet: /~/mn-cse</title>
+</head>
+<body>
+<h2>HTTP ERROR: 404</h2>
+<p>Problem accessing /~/mn-cse. Reason:
+<pre>    ProxyServlet: /~/mn-cse</pre></p>
+<hr /><i><small>Powered by Jetty://</small></i>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+</body>
+</html>
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=text/html;charset=ISO-8859-1,
+]
+[2021-01-01 10:47:31,439 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=4004,
+ content=<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 404 ProxyServlet: /~/mn-cse</title>
+</head>
+<body>
+<h2>HTTP ERROR: 404</h2>
+<p>Problem accessing /~/mn-cse. Reason:
+<pre>    ProxyServlet: /~/mn-cse</pre></p>
+<hr /><i><small>Powered by Jetty://</small></i>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+</body>
+</html>
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=text/html;charset=ISO-8859-1,
+]
+[2021-01-01 10:47:36,250 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 10:47:36,250 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse,
+ resultContent=5,
+ ]
+[2021-01-01 10:47:36,250 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 10:47:36,250 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:47:36,250 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse
+[2021-01-01 10:47:36,250 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 10:47:36,250 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:47:36,250 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:47:36,250 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 10:47:36,250 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse?rcn=5 HTTP/1.1
+[2021-01-01 10:47:36,250 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 10:47:36,495 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cb xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-name">
+   <ty>5</ty>
+   <ri>/mn-cse</ri>
+   <ct>20201126T151401</ct>
+   <lt>20201126T151401</lt>
+   <acpi>/mn-cse/acp-224641201</acpi>
+   <cst>1</cst>
+   <csi>mn-cse</csi>
+   <srt>1 2 3 4 5 9 14 15 16 17 23</srt>
+   <poa>http://127.0.0.1:8282/</poa>
+   <ch rn="acp_admin" ty="1">/mn-cse/acp-224641201</ch>
+   <ch rn="acpae-427197276" ty="1">/mn-cse/acp-133640809</ch>
+   <ch rn="acpae-415172227" ty="1">/mn-cse/acp-96171686</ch>
+   <ch rn="acpae-673524829" ty="1">/mn-cse/acp-14417641</ch>
+   <ch rn="acpae-240603717" ty="1">/mn-cse/acp-9823410</ch>
+   <ch rn="acpae-321878252" ty="1">/mn-cse/acp-214377095</ch>
+   <ch rn="acpae-531904206" ty="1">/mn-cse/acp-161812228</ch>
+   <ch rn="acpae-509007852" ty="1">/mn-cse/acp-53841300</ch>
+   <ch rn="LightSensor" ty="2">/mn-cse/CAE427197276</ch>
+   <ch rn="TemperatureSensor" ty="2">/mn-cse/CAE415172227</ch>
+   <ch rn="PresenceSensor" ty="2">/mn-cse/CAE673524829</ch>
+   <ch rn="LightSwitchActuator" ty="2">/mn-cse/CAE240603717</ch>
+   <ch rn="WindowActuator" ty="2">/mn-cse/CAE321878252</ch>
+   <ch rn="DoorActuator" ty="2">/mn-cse/CAE531904206</ch>
+   <ch rn="Alarm" ty="2">/mn-cse/CAE509007852</ch>
+   <ch rn="in-name" ty="16">/mn-cse/csr-683180068</ch>
+</m2m:cb>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 10:47:36,503 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cb xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-name">
+   <ty>5</ty>
+   <ri>/mn-cse</ri>
+   <ct>20201126T151401</ct>
+   <lt>20201126T151401</lt>
+   <acpi>/mn-cse/acp-224641201</acpi>
+   <cst>1</cst>
+   <csi>mn-cse</csi>
+   <srt>1 2 3 4 5 9 14 15 16 17 23</srt>
+   <poa>http://127.0.0.1:8282/</poa>
+   <ch rn="acp_admin" ty="1">/mn-cse/acp-224641201</ch>
+   <ch rn="acpae-427197276" ty="1">/mn-cse/acp-133640809</ch>
+   <ch rn="acpae-415172227" ty="1">/mn-cse/acp-96171686</ch>
+   <ch rn="acpae-673524829" ty="1">/mn-cse/acp-14417641</ch>
+   <ch rn="acpae-240603717" ty="1">/mn-cse/acp-9823410</ch>
+   <ch rn="acpae-321878252" ty="1">/mn-cse/acp-214377095</ch>
+   <ch rn="acpae-531904206" ty="1">/mn-cse/acp-161812228</ch>
+   <ch rn="acpae-509007852" ty="1">/mn-cse/acp-53841300</ch>
+   <ch rn="LightSensor" ty="2">/mn-cse/CAE427197276</ch>
+   <ch rn="TemperatureSensor" ty="2">/mn-cse/CAE415172227</ch>
+   <ch rn="PresenceSensor" ty="2">/mn-cse/CAE673524829</ch>
+   <ch rn="LightSwitchActuator" ty="2">/mn-cse/CAE240603717</ch>
+   <ch rn="WindowActuator" ty="2">/mn-cse/CAE321878252</ch>
+   <ch rn="DoorActuator" ty="2">/mn-cse/CAE531904206</ch>
+   <ch rn="Alarm" ty="2">/mn-cse/CAE509007852</ch>
+   <ch rn="in-name" ty="16">/mn-cse/csr-683180068</ch>
+</m2m:cb>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 10:49:04,401 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 10:49:04,402 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE427197276,
+ resultContent=5,
+ ]
+[2021-01-01 10:49:04,404 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 10:49:04,404 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE427197276,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:49:04,406 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/CAE427197276
+[2021-01-01 10:49:04,410 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 10:49:04,411 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/CAE427197276,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:49:04,413 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/CAE427197276,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:49:04,415 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 10:49:04,415 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/CAE427197276?rcn=5 HTTP/1.1
+[2021-01-01 10:49:04,415 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 10:49:04,487 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="LightSensor">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE427197276</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201126T152425</ct>
+   <lt>20201126T152425</lt>
+   <lbl>Category/light Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-133640809</acpi>
+   <et>20211126T152425</et>
+   <api>app-sensor</api>
+   <aei>CAE427197276</aei>
+   <ch rn="DATA" ty="3">/mn-cse/cnt-542822182</ch>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-904851684</ch>
+   <rr>false</rr>
+</m2m:ae>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 10:49:04,489 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="LightSensor">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE427197276</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201126T152425</ct>
+   <lt>20201126T152425</lt>
+   <lbl>Category/light Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-133640809</acpi>
+   <et>20211126T152425</et>
+   <api>app-sensor</api>
+   <aei>CAE427197276</aei>
+   <ch rn="DATA" ty="3">/mn-cse/cnt-542822182</ch>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-904851684</ch>
+   <rr>false</rr>
+</m2m:ae>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 10:49:05,877 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 10:49:05,878 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-542822182,
+ resultContent=5,
+ ]
+[2021-01-01 10:49:05,879 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 10:49:05,881 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-542822182,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:49:05,882 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-542822182
+[2021-01-01 10:49:05,885 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 10:49:05,885 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-542822182,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:49:05,886 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-542822182,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:49:05,887 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 10:49:05,890 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-542822182?rcn=5 HTTP/1.1
+[2021-01-01 10:49:05,890 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 10:49:05,915 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DATA">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-542822182</ri>
+   <pi>/mn-cse/CAE427197276</pi>
+   <ct>20201126T152846</ct>
+   <lt>20201126T152846</lt>
+   <acpi>/mn-cse/acp-133640809</acpi>
+   <et>20211126T152846</et>
+   <st>26</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>25</cni>
+   <cbs>66</cbs>
+   <ch rn="cin_698473921" ty="4">/mn-cse/cin-698473921</ch>
+   <ch rn="cin_765528220" ty="4">/mn-cse/cin-765528220</ch>
+   <ch rn="cin_829734198" ty="4">/mn-cse/cin-829734198</ch>
+   <ch rn="cin_740997812" ty="4">/mn-cse/cin-740997812</ch>
+   <ch rn="cin_340568193" ty="4">/mn-cse/cin-340568193</ch>
+   <ch rn="cin_849001934" ty="4">/mn-cse/cin-849001934</ch>
+   <ch rn="cin_197806263" ty="4">/mn-cse/cin-197806263</ch>
+   <ch rn="cin_17010412" ty="4">/mn-cse/cin-17010412</ch>
+   <ch rn="cin_574154058" ty="4">/mn-cse/cin-574154058</ch>
+   <ch rn="cin_7749277" ty="4">/mn-cse/cin-7749277</ch>
+   <ch rn="cin_847026298" ty="4">/mn-cse/cin-847026298</ch>
+   <ch rn="cin_574220830" ty="4">/mn-cse/cin-574220830</ch>
+   <ch rn="cin_419938944" ty="4">/mn-cse/cin-419938944</ch>
+   <ch rn="cin_209000080" ty="4">/mn-cse/cin-209000080</ch>
+   <ch rn="cin_211100752" ty="4">/mn-cse/cin-211100752</ch>
+   <ch rn="cin_730743518" ty="4">/mn-cse/cin-730743518</ch>
+   <ch rn="cin_735241653" ty="4">/mn-cse/cin-735241653</ch>
+   <ch rn="cin_547022689" ty="4">/mn-cse/cin-547022689</ch>
+   <ch rn="cin_760948242" ty="4">/mn-cse/cin-760948242</ch>
+   <ch rn="cin_856348249" ty="4">/mn-cse/cin-856348249</ch>
+   <ch rn="cin_120024425" ty="4">/mn-cse/cin-120024425</ch>
+   <ch rn="cin_342948061" ty="4">/mn-cse/cin-342948061</ch>
+   <ch rn="cin_512470723" ty="4">/mn-cse/cin-512470723</ch>
+   <ch rn="cin_955736468" ty="4">/mn-cse/cin-955736468</ch>
+   <ch rn="cin_914078459" ty="4">/mn-cse/cin-914078459</ch>
+   <ol>/mn-cse/mn-name/LightSensor/DATA/ol</ol>
+   <la>/mn-cse/mn-name/LightSensor/DATA/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 10:49:05,916 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DATA">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-542822182</ri>
+   <pi>/mn-cse/CAE427197276</pi>
+   <ct>20201126T152846</ct>
+   <lt>20201126T152846</lt>
+   <acpi>/mn-cse/acp-133640809</acpi>
+   <et>20211126T152846</et>
+   <st>26</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>25</cni>
+   <cbs>66</cbs>
+   <ch rn="cin_698473921" ty="4">/mn-cse/cin-698473921</ch>
+   <ch rn="cin_765528220" ty="4">/mn-cse/cin-765528220</ch>
+   <ch rn="cin_829734198" ty="4">/mn-cse/cin-829734198</ch>
+   <ch rn="cin_740997812" ty="4">/mn-cse/cin-740997812</ch>
+   <ch rn="cin_340568193" ty="4">/mn-cse/cin-340568193</ch>
+   <ch rn="cin_849001934" ty="4">/mn-cse/cin-849001934</ch>
+   <ch rn="cin_197806263" ty="4">/mn-cse/cin-197806263</ch>
+   <ch rn="cin_17010412" ty="4">/mn-cse/cin-17010412</ch>
+   <ch rn="cin_574154058" ty="4">/mn-cse/cin-574154058</ch>
+   <ch rn="cin_7749277" ty="4">/mn-cse/cin-7749277</ch>
+   <ch rn="cin_847026298" ty="4">/mn-cse/cin-847026298</ch>
+   <ch rn="cin_574220830" ty="4">/mn-cse/cin-574220830</ch>
+   <ch rn="cin_419938944" ty="4">/mn-cse/cin-419938944</ch>
+   <ch rn="cin_209000080" ty="4">/mn-cse/cin-209000080</ch>
+   <ch rn="cin_211100752" ty="4">/mn-cse/cin-211100752</ch>
+   <ch rn="cin_730743518" ty="4">/mn-cse/cin-730743518</ch>
+   <ch rn="cin_735241653" ty="4">/mn-cse/cin-735241653</ch>
+   <ch rn="cin_547022689" ty="4">/mn-cse/cin-547022689</ch>
+   <ch rn="cin_760948242" ty="4">/mn-cse/cin-760948242</ch>
+   <ch rn="cin_856348249" ty="4">/mn-cse/cin-856348249</ch>
+   <ch rn="cin_120024425" ty="4">/mn-cse/cin-120024425</ch>
+   <ch rn="cin_342948061" ty="4">/mn-cse/cin-342948061</ch>
+   <ch rn="cin_512470723" ty="4">/mn-cse/cin-512470723</ch>
+   <ch rn="cin_955736468" ty="4">/mn-cse/cin-955736468</ch>
+   <ch rn="cin_914078459" ty="4">/mn-cse/cin-914078459</ch>
+   <ol>/mn-cse/mn-name/LightSensor/DATA/ol</ol>
+   <la>/mn-cse/mn-name/LightSensor/DATA/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 10:49:06,695 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 10:49:06,696 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-698473921,
+ resultContent=5,
+ ]
+[2021-01-01 10:49:06,698 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 10:49:06,700 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-698473921,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:49:06,701 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cin-698473921
+[2021-01-01 10:49:06,704 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 10:49:06,704 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cin-698473921,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:49:06,705 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cin-698473921,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:49:06,706 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 10:49:06,710 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cin-698473921?rcn=5 HTTP/1.1
+[2021-01-01 10:49:06,711 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 10:49:06,749 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_698473921">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-698473921</ri>
+   <pi>/mn-cse/cnt-542822182</pi>
+   <ct>20201205T154842</ct>
+   <lt>20201205T154842</lt>
+   <st>0</st>
+   <cnf>int</cnf>
+   <cs>3</cs>
+   <con>150</con>
+</m2m:cin>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 10:49:06,750 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_698473921">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-698473921</ri>
+   <pi>/mn-cse/cnt-542822182</pi>
+   <ct>20201205T154842</ct>
+   <lt>20201205T154842</lt>
+   <st>0</st>
+   <cnf>int</cnf>
+   <cs>3</cs>
+   <con>150</con>
+</m2m:cin>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 10:49:11,540 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 10:49:11,540 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-914078459,
+ resultContent=5,
+ ]
+[2021-01-01 10:49:11,542 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 10:49:11,542 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-914078459,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:49:11,544 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cin-914078459
+[2021-01-01 10:49:11,552 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 10:49:11,553 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cin-914078459,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:49:11,554 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cin-914078459,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 10:49:11,555 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 10:49:11,555 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cin-914078459?rcn=5 HTTP/1.1
+[2021-01-01 10:49:11,556 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 10:49:11,574 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_914078459">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-914078459</ri>
+   <pi>/mn-cse/cnt-542822182</pi>
+   <ct>20201208T173007</ct>
+   <lt>20201208T173007</lt>
+   <st>0</st>
+   <cnf>integer</cnf>
+   <cs>3</cs>
+   <con>195</con>
+</m2m:cin>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 10:49:11,575 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_914078459">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-914078459</ri>
+   <pi>/mn-cse/cnt-542822182</pi>
+   <ct>20201208T173007</ct>
+   <lt>20201208T173007</lt>
+   <st>0</st>
+   <cnf>integer</cnf>
+   <cs>3</cs>
+   <con>195</con>
+</m2m:cin>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:35:48,689 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:35:48,690 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE240603717,
+ resultContent=5,
+ ]
+[2021-01-01 11:35:48,690 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:35:48,691 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE240603717,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:35:48,692 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/CAE240603717
+[2021-01-01 11:35:48,695 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:35:48,695 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/CAE240603717,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:35:48,696 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/CAE240603717,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:35:48,697 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:35:48,699 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/CAE240603717?rcn=5 HTTP/1.1
+[2021-01-01 11:35:48,700 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:35:48,708 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="LightSwitchActuator">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE240603717</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201205T180935</ct>
+   <lt>20201205T180935</lt>
+   <lbl>Category/light Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T180935</et>
+   <api>app-sensor</api>
+   <aei>CAE240603717</aei>
+   <ch rn="STATE" ty="3">/mn-cse/cnt-574029018</ch>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-959672602</ch>
+   <rr>false</rr>
+</m2m:ae>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:35:48,709 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="LightSwitchActuator">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE240603717</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201205T180935</ct>
+   <lt>20201205T180935</lt>
+   <lbl>Category/light Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T180935</et>
+   <api>app-sensor</api>
+   <aei>CAE240603717</aei>
+   <ch rn="STATE" ty="3">/mn-cse/cnt-574029018</ch>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-959672602</ch>
+   <rr>false</rr>
+</m2m:ae>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:36:58,836 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:36:58,839 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE509007852,
+ resultContent=5,
+ ]
+[2021-01-01 11:36:58,840 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:36:58,840 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE509007852,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:36:58,840 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/CAE509007852
+[2021-01-01 11:36:58,843 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:36:58,844 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/CAE509007852,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:36:58,844 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/CAE509007852,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:36:58,845 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:36:58,846 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/CAE509007852?rcn=5 HTTP/1.1
+[2021-01-01 11:36:58,846 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:36:58,854 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="Alarm">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE509007852</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201205T181027</ct>
+   <lt>20201205T181027</lt>
+   <lbl>Category/security Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-53841300</acpi>
+   <et>20211205T181027</et>
+   <api>app-sensor</api>
+   <aei>CAE509007852</aei>
+   <ch rn="STATE" ty="3">/mn-cse/cnt-625619425</ch>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-820864755</ch>
+   <rr>false</rr>
+</m2m:ae>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:36:58,855 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="Alarm">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE509007852</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201205T181027</ct>
+   <lt>20201205T181027</lt>
+   <lbl>Category/security Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-53841300</acpi>
+   <et>20211205T181027</et>
+   <api>app-sensor</api>
+   <aei>CAE509007852</aei>
+   <ch rn="STATE" ty="3">/mn-cse/cnt-625619425</ch>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-820864755</ch>
+   <rr>false</rr>
+</m2m:ae>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:39:05,972 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:39:05,973 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-574029018,
+ resultContent=5,
+ ]
+[2021-01-01 11:39:05,973 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:39:05,973 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:05,974 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-574029018
+[2021-01-01 11:39:05,977 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:39:05,978 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:05,979 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:05,980 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:39:05,980 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-574029018?rcn=5 HTTP/1.1
+[2021-01-01 11:39:05,980 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:39:05,986 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:39:05,987 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:39:07,036 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:39:07,037 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-574029018,
+ resultContent=5,
+ ]
+[2021-01-01 11:39:07,037 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:39:07,038 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:07,038 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-574029018
+[2021-01-01 11:39:07,042 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:39:07,042 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:07,042 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:07,043 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:39:07,044 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-574029018?rcn=5 HTTP/1.1
+[2021-01-01 11:39:07,045 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:39:07,052 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:39:07,052 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:39:08,799 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:39:08,800 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE531904206,
+ resultContent=5,
+ ]
+[2021-01-01 11:39:08,801 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:39:08,801 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE531904206,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:08,801 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/CAE531904206
+[2021-01-01 11:39:08,804 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:39:08,804 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/CAE531904206,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:08,805 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/CAE531904206,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:08,807 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:39:08,807 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/CAE531904206?rcn=5 HTTP/1.1
+[2021-01-01 11:39:08,807 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:39:08,814 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DoorActuator">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE531904206</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201205T181009</ct>
+   <lt>20201205T181009</lt>
+   <lbl>Category/door Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-161812228</acpi>
+   <et>20211205T181009</et>
+   <api>app-sensor</api>
+   <aei>CAE531904206</aei>
+   <ch rn="STATE" ty="3">/mn-cse/cnt-843540837</ch>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-877462322</ch>
+   <rr>false</rr>
+</m2m:ae>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:39:08,815 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DoorActuator">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE531904206</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201205T181009</ct>
+   <lt>20201205T181009</lt>
+   <lbl>Category/door Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-161812228</acpi>
+   <et>20211205T181009</et>
+   <api>app-sensor</api>
+   <aei>CAE531904206</aei>
+   <ch rn="STATE" ty="3">/mn-cse/cnt-843540837</ch>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-877462322</ch>
+   <rr>false</rr>
+</m2m:ae>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:39:09,277 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:39:09,278 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE321878252,
+ resultContent=5,
+ ]
+[2021-01-01 11:39:09,279 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:39:09,279 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE321878252,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:09,280 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/CAE321878252
+[2021-01-01 11:39:09,283 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:39:09,283 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/CAE321878252,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:09,284 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/CAE321878252,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:09,284 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:39:09,285 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/CAE321878252?rcn=5 HTTP/1.1
+[2021-01-01 11:39:09,285 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:39:09,294 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="WindowActuator">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE321878252</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201205T180957</ct>
+   <lt>20201205T180957</lt>
+   <lbl>Category/window Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T180957</et>
+   <api>app-sensor</api>
+   <aei>CAE321878252</aei>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-169417954</ch>
+   <ch rn="STATE" ty="3">/mn-cse/cnt-491058385</ch>
+   <rr>false</rr>
+</m2m:ae>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:39:09,294 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="WindowActuator">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE321878252</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201205T180957</ct>
+   <lt>20201205T180957</lt>
+   <lbl>Category/window Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T180957</et>
+   <api>app-sensor</api>
+   <aei>CAE321878252</aei>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-169417954</ch>
+   <ch rn="STATE" ty="3">/mn-cse/cnt-491058385</ch>
+   <rr>false</rr>
+</m2m:ae>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:39:10,320 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:39:10,321 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-491058385,
+ resultContent=5,
+ ]
+[2021-01-01 11:39:10,321 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:39:10,322 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:10,322 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-491058385
+[2021-01-01 11:39:10,325 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:39:10,326 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:10,326 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:39:10,327 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:39:10,327 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-491058385?rcn=5 HTTP/1.1
+[2021-01-01 11:39:10,328 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:39:10,335 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:39:10,336 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:41:33,053 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:41:33,054 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-491058385,
+ resultContent=5,
+ ]
+[2021-01-01 11:41:33,055 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:41:33,055 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:33,055 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-491058385
+[2021-01-01 11:41:33,058 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:41:33,059 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:33,060 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:33,062 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:41:33,063 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-491058385?rcn=5 HTTP/1.1
+[2021-01-01 11:41:33,064 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:41:33,072 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:41:33,073 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:41:34,124 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:41:34,125 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-574029018,
+ resultContent=5,
+ ]
+[2021-01-01 11:41:34,125 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:41:34,126 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:34,127 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-574029018
+[2021-01-01 11:41:34,130 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:41:34,131 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:34,131 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:34,132 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:41:34,132 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-574029018?rcn=5 HTTP/1.1
+[2021-01-01 11:41:34,133 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:41:34,137 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:41:34,138 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:41:48,735 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:41:48,735 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-491058385,
+ resultContent=5,
+ ]
+[2021-01-01 11:41:48,736 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:41:48,736 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:48,737 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-491058385
+[2021-01-01 11:41:48,738 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:41:48,738 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:48,739 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:48,740 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:41:48,741 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-491058385?rcn=5 HTTP/1.1
+[2021-01-01 11:41:48,741 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:41:48,746 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:41:48,746 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:41:49,478 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:41:49,479 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-169417954,
+ resultContent=5,
+ ]
+[2021-01-01 11:41:49,479 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:41:49,479 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-169417954,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:49,480 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-169417954
+[2021-01-01 11:41:49,483 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:41:49,484 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-169417954,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:49,484 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-169417954,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:49,485 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:41:49,485 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-169417954?rcn=5 HTTP/1.1
+[2021-01-01 11:41:49,486 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:41:49,491 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DESCRIPTOR">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-169417954</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181236</ct>
+   <lt>20201205T181236</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181236</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/DESCRIPTOR/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/DESCRIPTOR/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:41:49,492 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DESCRIPTOR">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-169417954</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181236</ct>
+   <lt>20201205T181236</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181236</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/DESCRIPTOR/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/DESCRIPTOR/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:41:55,599 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:41:55,600 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-574029018,
+ resultContent=5,
+ ]
+[2021-01-01 11:41:55,600 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:41:55,600 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:55,601 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-574029018
+[2021-01-01 11:41:55,603 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:41:55,603 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:55,604 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:41:55,604 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:41:55,605 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-574029018?rcn=5 HTTP/1.1
+[2021-01-01 11:41:55,605 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:41:55,608 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:41:55,609 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:44:37,970 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:44:37,970 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-574029018,
+ resultContent=5,
+ ]
+[2021-01-01 11:44:37,971 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:44:37,971 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:44:37,972 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-574029018
+[2021-01-01 11:44:37,974 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:44:37,974 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:44:37,975 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:44:37,976 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:44:37,976 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-574029018?rcn=5 HTTP/1.1
+[2021-01-01 11:44:37,977 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:44:37,981 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:44:37,982 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:44:39,327 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:44:39,327 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-491058385,
+ resultContent=5,
+ ]
+[2021-01-01 11:44:39,327 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:44:39,327 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:44:39,327 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-491058385
+[2021-01-01 11:44:39,342 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:44:39,342 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:44:39,342 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:44:39,342 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:44:39,342 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-491058385?rcn=5 HTTP/1.1
+[2021-01-01 11:44:39,342 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:44:39,342 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:44:39,342 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-843540837,
+ resultContent=5,
+ ]
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-843540837
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-843540837?rcn=5 HTTP/1.1
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-843540837</ri>
+   <pi>/mn-cse/CAE531904206</pi>
+   <ct>20201205T181315</ct>
+   <lt>20201205T181315</lt>
+   <acpi>/mn-cse/acp-161812228</acpi>
+   <et>20211205T181315</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/DoorActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/DoorActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:44:40,060 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-843540837</ri>
+   <pi>/mn-cse/CAE531904206</pi>
+   <ct>20201205T181315</ct>
+   <lt>20201205T181315</lt>
+   <acpi>/mn-cse/acp-161812228</acpi>
+   <et>20211205T181315</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/DoorActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/DoorActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:45:15,723 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:45:15,723 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-625619425,
+ resultContent=5,
+ ]
+[2021-01-01 11:45:15,723 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:45:15,723 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-625619425,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:45:15,723 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-625619425
+[2021-01-01 11:45:15,723 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:45:15,739 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-625619425,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:45:15,739 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-625619425,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:45:15,739 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:45:15,739 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-625619425?rcn=5 HTTP/1.1
+[2021-01-01 11:45:15,739 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:45:15,739 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-625619425</ri>
+   <pi>/mn-cse/CAE509007852</pi>
+   <ct>20201205T181130</ct>
+   <lt>20201205T181130</lt>
+   <acpi>/mn-cse/acp-53841300</acpi>
+   <et>20211205T181130</et>
+   <st>4</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>4</cni>
+   <cbs>12</cbs>
+   <ch rn="cin_430475976" ty="4">/mn-cse/cin-430475976</ch>
+   <ch rn="cin_471016940" ty="4">/mn-cse/cin-471016940</ch>
+   <ch rn="cin_641677254" ty="4">/mn-cse/cin-641677254</ch>
+   <ch rn="cin_335482203" ty="4">/mn-cse/cin-335482203</ch>
+   <ol>/mn-cse/mn-name/Alarm/STATE/ol</ol>
+   <la>/mn-cse/mn-name/Alarm/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:45:15,739 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-625619425</ri>
+   <pi>/mn-cse/CAE509007852</pi>
+   <ct>20201205T181130</ct>
+   <lt>20201205T181130</lt>
+   <acpi>/mn-cse/acp-53841300</acpi>
+   <et>20211205T181130</et>
+   <st>4</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>4</cni>
+   <cbs>12</cbs>
+   <ch rn="cin_430475976" ty="4">/mn-cse/cin-430475976</ch>
+   <ch rn="cin_471016940" ty="4">/mn-cse/cin-471016940</ch>
+   <ch rn="cin_641677254" ty="4">/mn-cse/cin-641677254</ch>
+   <ch rn="cin_335482203" ty="4">/mn-cse/cin-335482203</ch>
+   <ol>/mn-cse/mn-name/Alarm/STATE/ol</ol>
+   <la>/mn-cse/mn-name/Alarm/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:45:17,311 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:45:17,311 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-430475976,
+ resultContent=5,
+ ]
+[2021-01-01 11:45:17,311 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:45:17,311 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-430475976,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:45:17,311 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cin-430475976
+[2021-01-01 11:45:17,311 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:45:17,311 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cin-430475976,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:45:17,311 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cin-430475976,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:45:17,311 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:45:17,311 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cin-430475976?rcn=5 HTTP/1.1
+[2021-01-01 11:45:17,327 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:45:17,327 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_430475976">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-430475976</ri>
+   <pi>/mn-cse/cnt-625619425</pi>
+   <ct>20210101T114505</ct>
+   <lt>20210101T114505</lt>
+   <st>0</st>
+   <cnf></cnf>
+   <cs>3</cs>
+   <con>OFF</con>
+</m2m:cin>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:45:17,327 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_430475976">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-430475976</ri>
+   <pi>/mn-cse/cnt-625619425</pi>
+   <ct>20210101T114505</ct>
+   <lt>20210101T114505</lt>
+   <st>0</st>
+   <cnf></cnf>
+   <cs>3</cs>
+   <con>OFF</con>
+</m2m:cin>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:46:41,017 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:46:41,017 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-574029018,
+ resultContent=5,
+ ]
+[2021-01-01 11:46:41,017 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:46:41,017 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:46:41,017 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-574029018
+[2021-01-01 11:46:41,017 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:46:41,017 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:46:41,017 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:46:41,017 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:46:41,017 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-574029018?rcn=5 HTTP/1.1
+[2021-01-01 11:46:41,017 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:46:41,033 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:46:41,033 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:46:42,169 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:46:42,169 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-491058385,
+ resultContent=5,
+ ]
+[2021-01-01 11:46:42,169 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:46:42,169 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:46:42,169 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-491058385
+[2021-01-01 11:46:42,169 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:46:42,169 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:46:42,184 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:46:42,184 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:46:42,184 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-491058385?rcn=5 HTTP/1.1
+[2021-01-01 11:46:42,184 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:46:42,184 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:46:42,184 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:46:43,375 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:46:43,375 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-843540837,
+ resultContent=5,
+ ]
+[2021-01-01 11:46:43,375 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:46:43,375 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:46:43,375 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-843540837
+[2021-01-01 11:46:43,390 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:46:43,390 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:46:43,390 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:46:43,390 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:46:43,390 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-843540837?rcn=5 HTTP/1.1
+[2021-01-01 11:46:43,390 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:46:43,390 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-843540837</ri>
+   <pi>/mn-cse/CAE531904206</pi>
+   <ct>20201205T181315</ct>
+   <lt>20201205T181315</lt>
+   <acpi>/mn-cse/acp-161812228</acpi>
+   <et>20211205T181315</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/DoorActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/DoorActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:46:43,390 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-843540837</ri>
+   <pi>/mn-cse/CAE531904206</pi>
+   <ct>20201205T181315</ct>
+   <lt>20201205T181315</lt>
+   <acpi>/mn-cse/acp-161812228</acpi>
+   <et>20211205T181315</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/DoorActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/DoorActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:39,410 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:50:39,410 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-491058385,
+ resultContent=5,
+ ]
+[2021-01-01 11:50:39,410 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:50:39,410 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:39,410 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-491058385
+[2021-01-01 11:50:39,426 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:50:39,426 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:39,426 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:39,426 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:50:39,426 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-491058385?rcn=5 HTTP/1.1
+[2021-01-01 11:50:39,426 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:50:39,426 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:39,426 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-574029018,
+ resultContent=5,
+ ]
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-574029018
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-574029018?rcn=5 HTTP/1.1
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:40,824 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-843540837,
+ resultContent=5,
+ ]
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-843540837
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-843540837?rcn=5 HTTP/1.1
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-843540837</ri>
+   <pi>/mn-cse/CAE531904206</pi>
+   <ct>20201205T181315</ct>
+   <lt>20201205T181315</lt>
+   <acpi>/mn-cse/acp-161812228</acpi>
+   <et>20211205T181315</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/DoorActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/DoorActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:42,005 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-843540837</ri>
+   <pi>/mn-cse/CAE531904206</pi>
+   <ct>20201205T181315</ct>
+   <lt>20201205T181315</lt>
+   <acpi>/mn-cse/acp-161812228</acpi>
+   <et>20211205T181315</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/DoorActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/DoorActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:54,461 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:50:54,461 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-491058385,
+ resultContent=5,
+ ]
+[2021-01-01 11:50:54,461 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:50:54,461 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:54,461 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-491058385
+[2021-01-01 11:50:54,477 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:50:54,477 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:54,477 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:54,477 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:50:54,477 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-491058385?rcn=5 HTTP/1.1
+[2021-01-01 11:50:54,477 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:50:54,477 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:54,477 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:54,963 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:50:54,963 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-491058385,
+ resultContent=5,
+ ]
+[2021-01-01 11:50:54,979 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:50:54,979 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:54,979 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-491058385
+[2021-01-01 11:50:54,979 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:50:54,979 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:54,979 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:54,979 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:50:54,979 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-491058385?rcn=5 HTTP/1.1
+[2021-01-01 11:50:54,979 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:50:54,979 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:54,979 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:55,697 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:50:55,697 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-574029018,
+ resultContent=5,
+ ]
+[2021-01-01 11:50:55,704 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:50:55,704 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:55,704 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-574029018
+[2021-01-01 11:50:55,704 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:50:55,704 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:55,704 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:55,704 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:50:55,704 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-574029018?rcn=5 HTTP/1.1
+[2021-01-01 11:50:55,704 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:50:55,720 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:55,720 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:56,822 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:50:56,822 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-843540837,
+ resultContent=5,
+ ]
+[2021-01-01 11:50:56,822 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:50:56,822 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:56,838 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-843540837
+[2021-01-01 11:50:56,838 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:50:56,838 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:56,838 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:56,838 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:50:56,838 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-843540837?rcn=5 HTTP/1.1
+[2021-01-01 11:50:56,838 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:50:56,838 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-843540837</ri>
+   <pi>/mn-cse/CAE531904206</pi>
+   <ct>20201205T181315</ct>
+   <lt>20201205T181315</lt>
+   <acpi>/mn-cse/acp-161812228</acpi>
+   <et>20211205T181315</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/DoorActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/DoorActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:56,838 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-843540837</ri>
+   <pi>/mn-cse/CAE531904206</pi>
+   <ct>20201205T181315</ct>
+   <lt>20201205T181315</lt>
+   <acpi>/mn-cse/acp-161812228</acpi>
+   <et>20211205T181315</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/DoorActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/DoorActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:59,585 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:50:59,585 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-625619425,
+ resultContent=5,
+ ]
+[2021-01-01 11:50:59,585 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:50:59,601 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-625619425,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:59,601 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-625619425
+[2021-01-01 11:50:59,601 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:50:59,601 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-625619425,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:59,601 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-625619425,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:50:59,601 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:50:59,601 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-625619425?rcn=5 HTTP/1.1
+[2021-01-01 11:50:59,601 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:50:59,601 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-625619425</ri>
+   <pi>/mn-cse/CAE509007852</pi>
+   <ct>20201205T181130</ct>
+   <lt>20201205T181130</lt>
+   <acpi>/mn-cse/acp-53841300</acpi>
+   <et>20211205T181130</et>
+   <st>63</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>63</cni>
+   <cbs>189</cbs>
+   <ch rn="cin_430475976" ty="4">/mn-cse/cin-430475976</ch>
+   <ch rn="cin_471016940" ty="4">/mn-cse/cin-471016940</ch>
+   <ch rn="cin_641677254" ty="4">/mn-cse/cin-641677254</ch>
+   <ch rn="cin_335482203" ty="4">/mn-cse/cin-335482203</ch>
+   <ch rn="cin_721499875" ty="4">/mn-cse/cin-721499875</ch>
+   <ch rn="cin_334688442" ty="4">/mn-cse/cin-334688442</ch>
+   <ch rn="cin_116220585" ty="4">/mn-cse/cin-116220585</ch>
+   <ch rn="cin_312070776" ty="4">/mn-cse/cin-312070776</ch>
+   <ch rn="cin_958021871" ty="4">/mn-cse/cin-958021871</ch>
+   <ch rn="cin_387589948" ty="4">/mn-cse/cin-387589948</ch>
+   <ch rn="cin_96929413" ty="4">/mn-cse/cin-96929413</ch>
+   <ch rn="cin_177174377" ty="4">/mn-cse/cin-177174377</ch>
+   <ch rn="cin_459223975" ty="4">/mn-cse/cin-459223975</ch>
+   <ch rn="cin_317727974" ty="4">/mn-cse/cin-317727974</ch>
+   <ch rn="cin_791490654" ty="4">/mn-cse/cin-791490654</ch>
+   <ch rn="cin_228456377" ty="4">/mn-cse/cin-228456377</ch>
+   <ch rn="cin_886602523" ty="4">/mn-cse/cin-886602523</ch>
+   <ch rn="cin_527208256" ty="4">/mn-cse/cin-527208256</ch>
+   <ch rn="cin_242933655" ty="4">/mn-cse/cin-242933655</ch>
+   <ch rn="cin_738598445" ty="4">/mn-cse/cin-738598445</ch>
+   <ch rn="cin_596225703" ty="4">/mn-cse/cin-596225703</ch>
+   <ch rn="cin_624546622" ty="4">/mn-cse/cin-624546622</ch>
+   <ch rn="cin_978851286" ty="4">/mn-cse/cin-978851286</ch>
+   <ch rn="cin_347714206" ty="4">/mn-cse/cin-347714206</ch>
+   <ch rn="cin_148262765" ty="4">/mn-cse/cin-148262765</ch>
+   <ch rn="cin_794395665" ty="4">/mn-cse/cin-794395665</ch>
+   <ch rn="cin_304735292" ty="4">/mn-cse/cin-304735292</ch>
+   <ch rn="cin_689972369" ty="4">/mn-cse/cin-689972369</ch>
+   <ch rn="cin_707356650" ty="4">/mn-cse/cin-707356650</ch>
+   <ch rn="cin_911600242" ty="4">/mn-cse/cin-911600242</ch>
+   <ch rn="cin_473269099" ty="4">/mn-cse/cin-473269099</ch>
+   <ch rn="cin_336086894" ty="4">/mn-cse/cin-336086894</ch>
+   <ch rn="cin_787966605" ty="4">/mn-cse/cin-787966605</ch>
+   <ch rn="cin_3639038" ty="4">/mn-cse/cin-3639038</ch>
+   <ch rn="cin_331042698" ty="4">/mn-cse/cin-331042698</ch>
+   <ch rn="cin_963187439" ty="4">/mn-cse/cin-963187439</ch>
+   <ch rn="cin_669217622" ty="4">/mn-cse/cin-669217622</ch>
+   <ch rn="cin_968088910" ty="4">/mn-cse/cin-968088910</ch>
+   <ch rn="cin_997892531" ty="4">/mn-cse/cin-997892531</ch>
+   <ch rn="cin_940339393" ty="4">/mn-cse/cin-940339393</ch>
+   <ch rn="cin_249680704" ty="4">/mn-cse/cin-249680704</ch>
+   <ch rn="cin_889929329" ty="4">/mn-cse/cin-889929329</ch>
+   <ch rn="cin_97172555" ty="4">/mn-cse/cin-97172555</ch>
+   <ch rn="cin_241233680" ty="4">/mn-cse/cin-241233680</ch>
+   <ch rn="cin_160981317" ty="4">/mn-cse/cin-160981317</ch>
+   <ch rn="cin_88226513" ty="4">/mn-cse/cin-88226513</ch>
+   <ch rn="cin_952184185" ty="4">/mn-cse/cin-952184185</ch>
+   <ch rn="cin_420362233" ty="4">/mn-cse/cin-420362233</ch>
+   <ch rn="cin_422072610" ty="4">/mn-cse/cin-422072610</ch>
+   <ch rn="cin_330370740" ty="4">/mn-cse/cin-330370740</ch>
+   <ch rn="cin_586802003" ty="4">/mn-cse/cin-586802003</ch>
+   <ch rn="cin_218166339" ty="4">/mn-cse/cin-218166339</ch>
+   <ch rn="cin_809017154" ty="4">/mn-cse/cin-809017154</ch>
+   <ch rn="cin_293406725" ty="4">/mn-cse/cin-293406725</ch>
+   <ch rn="cin_944205446" ty="4">/mn-cse/cin-944205446</ch>
+   <ch rn="cin_227254878" ty="4">/mn-cse/cin-227254878</ch>
+   <ch rn="cin_736015646" ty="4">/mn-cse/cin-736015646</ch>
+   <ch rn="cin_449805799" ty="4">/mn-cse/cin-449805799</ch>
+   <ch rn="cin_153296757" ty="4">/mn-cse/cin-153296757</ch>
+   <ch rn="cin_762323705" ty="4">/mn-cse/cin-762323705</ch>
+   <ch rn="cin_302582988" ty="4">/mn-cse/cin-302582988</ch>
+   <ch rn="cin_532039041" ty="4">/mn-cse/cin-532039041</ch>
+   <ch rn="cin_634802960" ty="4">/mn-cse/cin-634802960</ch>
+   <ol>/mn-cse/mn-name/Alarm/STATE/ol</ol>
+   <la>/mn-cse/mn-name/Alarm/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:50:59,617 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-625619425</ri>
+   <pi>/mn-cse/CAE509007852</pi>
+   <ct>20201205T181130</ct>
+   <lt>20201205T181130</lt>
+   <acpi>/mn-cse/acp-53841300</acpi>
+   <et>20211205T181130</et>
+   <st>63</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>63</cni>
+   <cbs>189</cbs>
+   <ch rn="cin_430475976" ty="4">/mn-cse/cin-430475976</ch>
+   <ch rn="cin_471016940" ty="4">/mn-cse/cin-471016940</ch>
+   <ch rn="cin_641677254" ty="4">/mn-cse/cin-641677254</ch>
+   <ch rn="cin_335482203" ty="4">/mn-cse/cin-335482203</ch>
+   <ch rn="cin_721499875" ty="4">/mn-cse/cin-721499875</ch>
+   <ch rn="cin_334688442" ty="4">/mn-cse/cin-334688442</ch>
+   <ch rn="cin_116220585" ty="4">/mn-cse/cin-116220585</ch>
+   <ch rn="cin_312070776" ty="4">/mn-cse/cin-312070776</ch>
+   <ch rn="cin_958021871" ty="4">/mn-cse/cin-958021871</ch>
+   <ch rn="cin_387589948" ty="4">/mn-cse/cin-387589948</ch>
+   <ch rn="cin_96929413" ty="4">/mn-cse/cin-96929413</ch>
+   <ch rn="cin_177174377" ty="4">/mn-cse/cin-177174377</ch>
+   <ch rn="cin_459223975" ty="4">/mn-cse/cin-459223975</ch>
+   <ch rn="cin_317727974" ty="4">/mn-cse/cin-317727974</ch>
+   <ch rn="cin_791490654" ty="4">/mn-cse/cin-791490654</ch>
+   <ch rn="cin_228456377" ty="4">/mn-cse/cin-228456377</ch>
+   <ch rn="cin_886602523" ty="4">/mn-cse/cin-886602523</ch>
+   <ch rn="cin_527208256" ty="4">/mn-cse/cin-527208256</ch>
+   <ch rn="cin_242933655" ty="4">/mn-cse/cin-242933655</ch>
+   <ch rn="cin_738598445" ty="4">/mn-cse/cin-738598445</ch>
+   <ch rn="cin_596225703" ty="4">/mn-cse/cin-596225703</ch>
+   <ch rn="cin_624546622" ty="4">/mn-cse/cin-624546622</ch>
+   <ch rn="cin_978851286" ty="4">/mn-cse/cin-978851286</ch>
+   <ch rn="cin_347714206" ty="4">/mn-cse/cin-347714206</ch>
+   <ch rn="cin_148262765" ty="4">/mn-cse/cin-148262765</ch>
+   <ch rn="cin_794395665" ty="4">/mn-cse/cin-794395665</ch>
+   <ch rn="cin_304735292" ty="4">/mn-cse/cin-304735292</ch>
+   <ch rn="cin_689972369" ty="4">/mn-cse/cin-689972369</ch>
+   <ch rn="cin_707356650" ty="4">/mn-cse/cin-707356650</ch>
+   <ch rn="cin_911600242" ty="4">/mn-cse/cin-911600242</ch>
+   <ch rn="cin_473269099" ty="4">/mn-cse/cin-473269099</ch>
+   <ch rn="cin_336086894" ty="4">/mn-cse/cin-336086894</ch>
+   <ch rn="cin_787966605" ty="4">/mn-cse/cin-787966605</ch>
+   <ch rn="cin_3639038" ty="4">/mn-cse/cin-3639038</ch>
+   <ch rn="cin_331042698" ty="4">/mn-cse/cin-331042698</ch>
+   <ch rn="cin_963187439" ty="4">/mn-cse/cin-963187439</ch>
+   <ch rn="cin_669217622" ty="4">/mn-cse/cin-669217622</ch>
+   <ch rn="cin_968088910" ty="4">/mn-cse/cin-968088910</ch>
+   <ch rn="cin_997892531" ty="4">/mn-cse/cin-997892531</ch>
+   <ch rn="cin_940339393" ty="4">/mn-cse/cin-940339393</ch>
+   <ch rn="cin_249680704" ty="4">/mn-cse/cin-249680704</ch>
+   <ch rn="cin_889929329" ty="4">/mn-cse/cin-889929329</ch>
+   <ch rn="cin_97172555" ty="4">/mn-cse/cin-97172555</ch>
+   <ch rn="cin_241233680" ty="4">/mn-cse/cin-241233680</ch>
+   <ch rn="cin_160981317" ty="4">/mn-cse/cin-160981317</ch>
+   <ch rn="cin_88226513" ty="4">/mn-cse/cin-88226513</ch>
+   <ch rn="cin_952184185" ty="4">/mn-cse/cin-952184185</ch>
+   <ch rn="cin_420362233" ty="4">/mn-cse/cin-420362233</ch>
+   <ch rn="cin_422072610" ty="4">/mn-cse/cin-422072610</ch>
+   <ch rn="cin_330370740" ty="4">/mn-cse/cin-330370740</ch>
+   <ch rn="cin_586802003" ty="4">/mn-cse/cin-586802003</ch>
+   <ch rn="cin_218166339" ty="4">/mn-cse/cin-218166339</ch>
+   <ch rn="cin_809017154" ty="4">/mn-cse/cin-809017154</ch>
+   <ch rn="cin_293406725" ty="4">/mn-cse/cin-293406725</ch>
+   <ch rn="cin_944205446" ty="4">/mn-cse/cin-944205446</ch>
+   <ch rn="cin_227254878" ty="4">/mn-cse/cin-227254878</ch>
+   <ch rn="cin_736015646" ty="4">/mn-cse/cin-736015646</ch>
+   <ch rn="cin_449805799" ty="4">/mn-cse/cin-449805799</ch>
+   <ch rn="cin_153296757" ty="4">/mn-cse/cin-153296757</ch>
+   <ch rn="cin_762323705" ty="4">/mn-cse/cin-762323705</ch>
+   <ch rn="cin_302582988" ty="4">/mn-cse/cin-302582988</ch>
+   <ch rn="cin_532039041" ty="4">/mn-cse/cin-532039041</ch>
+   <ch rn="cin_634802960" ty="4">/mn-cse/cin-634802960</ch>
+   <ol>/mn-cse/mn-name/Alarm/STATE/ol</ol>
+   <la>/mn-cse/mn-name/Alarm/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:52:38,872 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:52:38,872 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-625619425,
+ resultContent=5,
+ ]
+[2021-01-01 11:52:38,872 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:52:38,872 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-625619425,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:52:38,888 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-625619425
+[2021-01-01 11:52:38,888 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:52:38,888 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-625619425,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:52:38,888 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-625619425,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:52:38,888 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:52:38,888 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-625619425?rcn=5 HTTP/1.1
+[2021-01-01 11:52:38,888 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:52:38,888 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-625619425</ri>
+   <pi>/mn-cse/CAE509007852</pi>
+   <ct>20201205T181130</ct>
+   <lt>20201205T181130</lt>
+   <acpi>/mn-cse/acp-53841300</acpi>
+   <et>20211205T181130</et>
+   <st>63</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>63</cni>
+   <cbs>189</cbs>
+   <ch rn="cin_430475976" ty="4">/mn-cse/cin-430475976</ch>
+   <ch rn="cin_471016940" ty="4">/mn-cse/cin-471016940</ch>
+   <ch rn="cin_641677254" ty="4">/mn-cse/cin-641677254</ch>
+   <ch rn="cin_335482203" ty="4">/mn-cse/cin-335482203</ch>
+   <ch rn="cin_721499875" ty="4">/mn-cse/cin-721499875</ch>
+   <ch rn="cin_334688442" ty="4">/mn-cse/cin-334688442</ch>
+   <ch rn="cin_116220585" ty="4">/mn-cse/cin-116220585</ch>
+   <ch rn="cin_312070776" ty="4">/mn-cse/cin-312070776</ch>
+   <ch rn="cin_958021871" ty="4">/mn-cse/cin-958021871</ch>
+   <ch rn="cin_387589948" ty="4">/mn-cse/cin-387589948</ch>
+   <ch rn="cin_96929413" ty="4">/mn-cse/cin-96929413</ch>
+   <ch rn="cin_177174377" ty="4">/mn-cse/cin-177174377</ch>
+   <ch rn="cin_459223975" ty="4">/mn-cse/cin-459223975</ch>
+   <ch rn="cin_317727974" ty="4">/mn-cse/cin-317727974</ch>
+   <ch rn="cin_791490654" ty="4">/mn-cse/cin-791490654</ch>
+   <ch rn="cin_228456377" ty="4">/mn-cse/cin-228456377</ch>
+   <ch rn="cin_886602523" ty="4">/mn-cse/cin-886602523</ch>
+   <ch rn="cin_527208256" ty="4">/mn-cse/cin-527208256</ch>
+   <ch rn="cin_242933655" ty="4">/mn-cse/cin-242933655</ch>
+   <ch rn="cin_738598445" ty="4">/mn-cse/cin-738598445</ch>
+   <ch rn="cin_596225703" ty="4">/mn-cse/cin-596225703</ch>
+   <ch rn="cin_624546622" ty="4">/mn-cse/cin-624546622</ch>
+   <ch rn="cin_978851286" ty="4">/mn-cse/cin-978851286</ch>
+   <ch rn="cin_347714206" ty="4">/mn-cse/cin-347714206</ch>
+   <ch rn="cin_148262765" ty="4">/mn-cse/cin-148262765</ch>
+   <ch rn="cin_794395665" ty="4">/mn-cse/cin-794395665</ch>
+   <ch rn="cin_304735292" ty="4">/mn-cse/cin-304735292</ch>
+   <ch rn="cin_689972369" ty="4">/mn-cse/cin-689972369</ch>
+   <ch rn="cin_707356650" ty="4">/mn-cse/cin-707356650</ch>
+   <ch rn="cin_911600242" ty="4">/mn-cse/cin-911600242</ch>
+   <ch rn="cin_473269099" ty="4">/mn-cse/cin-473269099</ch>
+   <ch rn="cin_336086894" ty="4">/mn-cse/cin-336086894</ch>
+   <ch rn="cin_787966605" ty="4">/mn-cse/cin-787966605</ch>
+   <ch rn="cin_3639038" ty="4">/mn-cse/cin-3639038</ch>
+   <ch rn="cin_331042698" ty="4">/mn-cse/cin-331042698</ch>
+   <ch rn="cin_963187439" ty="4">/mn-cse/cin-963187439</ch>
+   <ch rn="cin_669217622" ty="4">/mn-cse/cin-669217622</ch>
+   <ch rn="cin_968088910" ty="4">/mn-cse/cin-968088910</ch>
+   <ch rn="cin_997892531" ty="4">/mn-cse/cin-997892531</ch>
+   <ch rn="cin_940339393" ty="4">/mn-cse/cin-940339393</ch>
+   <ch rn="cin_249680704" ty="4">/mn-cse/cin-249680704</ch>
+   <ch rn="cin_889929329" ty="4">/mn-cse/cin-889929329</ch>
+   <ch rn="cin_97172555" ty="4">/mn-cse/cin-97172555</ch>
+   <ch rn="cin_241233680" ty="4">/mn-cse/cin-241233680</ch>
+   <ch rn="cin_160981317" ty="4">/mn-cse/cin-160981317</ch>
+   <ch rn="cin_88226513" ty="4">/mn-cse/cin-88226513</ch>
+   <ch rn="cin_952184185" ty="4">/mn-cse/cin-952184185</ch>
+   <ch rn="cin_420362233" ty="4">/mn-cse/cin-420362233</ch>
+   <ch rn="cin_422072610" ty="4">/mn-cse/cin-422072610</ch>
+   <ch rn="cin_330370740" ty="4">/mn-cse/cin-330370740</ch>
+   <ch rn="cin_586802003" ty="4">/mn-cse/cin-586802003</ch>
+   <ch rn="cin_218166339" ty="4">/mn-cse/cin-218166339</ch>
+   <ch rn="cin_809017154" ty="4">/mn-cse/cin-809017154</ch>
+   <ch rn="cin_293406725" ty="4">/mn-cse/cin-293406725</ch>
+   <ch rn="cin_944205446" ty="4">/mn-cse/cin-944205446</ch>
+   <ch rn="cin_227254878" ty="4">/mn-cse/cin-227254878</ch>
+   <ch rn="cin_736015646" ty="4">/mn-cse/cin-736015646</ch>
+   <ch rn="cin_449805799" ty="4">/mn-cse/cin-449805799</ch>
+   <ch rn="cin_153296757" ty="4">/mn-cse/cin-153296757</ch>
+   <ch rn="cin_762323705" ty="4">/mn-cse/cin-762323705</ch>
+   <ch rn="cin_302582988" ty="4">/mn-cse/cin-302582988</ch>
+   <ch rn="cin_532039041" ty="4">/mn-cse/cin-532039041</ch>
+   <ch rn="cin_634802960" ty="4">/mn-cse/cin-634802960</ch>
+   <ol>/mn-cse/mn-name/Alarm/STATE/ol</ol>
+   <la>/mn-cse/mn-name/Alarm/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:52:38,888 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-625619425</ri>
+   <pi>/mn-cse/CAE509007852</pi>
+   <ct>20201205T181130</ct>
+   <lt>20201205T181130</lt>
+   <acpi>/mn-cse/acp-53841300</acpi>
+   <et>20211205T181130</et>
+   <st>63</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>63</cni>
+   <cbs>189</cbs>
+   <ch rn="cin_430475976" ty="4">/mn-cse/cin-430475976</ch>
+   <ch rn="cin_471016940" ty="4">/mn-cse/cin-471016940</ch>
+   <ch rn="cin_641677254" ty="4">/mn-cse/cin-641677254</ch>
+   <ch rn="cin_335482203" ty="4">/mn-cse/cin-335482203</ch>
+   <ch rn="cin_721499875" ty="4">/mn-cse/cin-721499875</ch>
+   <ch rn="cin_334688442" ty="4">/mn-cse/cin-334688442</ch>
+   <ch rn="cin_116220585" ty="4">/mn-cse/cin-116220585</ch>
+   <ch rn="cin_312070776" ty="4">/mn-cse/cin-312070776</ch>
+   <ch rn="cin_958021871" ty="4">/mn-cse/cin-958021871</ch>
+   <ch rn="cin_387589948" ty="4">/mn-cse/cin-387589948</ch>
+   <ch rn="cin_96929413" ty="4">/mn-cse/cin-96929413</ch>
+   <ch rn="cin_177174377" ty="4">/mn-cse/cin-177174377</ch>
+   <ch rn="cin_459223975" ty="4">/mn-cse/cin-459223975</ch>
+   <ch rn="cin_317727974" ty="4">/mn-cse/cin-317727974</ch>
+   <ch rn="cin_791490654" ty="4">/mn-cse/cin-791490654</ch>
+   <ch rn="cin_228456377" ty="4">/mn-cse/cin-228456377</ch>
+   <ch rn="cin_886602523" ty="4">/mn-cse/cin-886602523</ch>
+   <ch rn="cin_527208256" ty="4">/mn-cse/cin-527208256</ch>
+   <ch rn="cin_242933655" ty="4">/mn-cse/cin-242933655</ch>
+   <ch rn="cin_738598445" ty="4">/mn-cse/cin-738598445</ch>
+   <ch rn="cin_596225703" ty="4">/mn-cse/cin-596225703</ch>
+   <ch rn="cin_624546622" ty="4">/mn-cse/cin-624546622</ch>
+   <ch rn="cin_978851286" ty="4">/mn-cse/cin-978851286</ch>
+   <ch rn="cin_347714206" ty="4">/mn-cse/cin-347714206</ch>
+   <ch rn="cin_148262765" ty="4">/mn-cse/cin-148262765</ch>
+   <ch rn="cin_794395665" ty="4">/mn-cse/cin-794395665</ch>
+   <ch rn="cin_304735292" ty="4">/mn-cse/cin-304735292</ch>
+   <ch rn="cin_689972369" ty="4">/mn-cse/cin-689972369</ch>
+   <ch rn="cin_707356650" ty="4">/mn-cse/cin-707356650</ch>
+   <ch rn="cin_911600242" ty="4">/mn-cse/cin-911600242</ch>
+   <ch rn="cin_473269099" ty="4">/mn-cse/cin-473269099</ch>
+   <ch rn="cin_336086894" ty="4">/mn-cse/cin-336086894</ch>
+   <ch rn="cin_787966605" ty="4">/mn-cse/cin-787966605</ch>
+   <ch rn="cin_3639038" ty="4">/mn-cse/cin-3639038</ch>
+   <ch rn="cin_331042698" ty="4">/mn-cse/cin-331042698</ch>
+   <ch rn="cin_963187439" ty="4">/mn-cse/cin-963187439</ch>
+   <ch rn="cin_669217622" ty="4">/mn-cse/cin-669217622</ch>
+   <ch rn="cin_968088910" ty="4">/mn-cse/cin-968088910</ch>
+   <ch rn="cin_997892531" ty="4">/mn-cse/cin-997892531</ch>
+   <ch rn="cin_940339393" ty="4">/mn-cse/cin-940339393</ch>
+   <ch rn="cin_249680704" ty="4">/mn-cse/cin-249680704</ch>
+   <ch rn="cin_889929329" ty="4">/mn-cse/cin-889929329</ch>
+   <ch rn="cin_97172555" ty="4">/mn-cse/cin-97172555</ch>
+   <ch rn="cin_241233680" ty="4">/mn-cse/cin-241233680</ch>
+   <ch rn="cin_160981317" ty="4">/mn-cse/cin-160981317</ch>
+   <ch rn="cin_88226513" ty="4">/mn-cse/cin-88226513</ch>
+   <ch rn="cin_952184185" ty="4">/mn-cse/cin-952184185</ch>
+   <ch rn="cin_420362233" ty="4">/mn-cse/cin-420362233</ch>
+   <ch rn="cin_422072610" ty="4">/mn-cse/cin-422072610</ch>
+   <ch rn="cin_330370740" ty="4">/mn-cse/cin-330370740</ch>
+   <ch rn="cin_586802003" ty="4">/mn-cse/cin-586802003</ch>
+   <ch rn="cin_218166339" ty="4">/mn-cse/cin-218166339</ch>
+   <ch rn="cin_809017154" ty="4">/mn-cse/cin-809017154</ch>
+   <ch rn="cin_293406725" ty="4">/mn-cse/cin-293406725</ch>
+   <ch rn="cin_944205446" ty="4">/mn-cse/cin-944205446</ch>
+   <ch rn="cin_227254878" ty="4">/mn-cse/cin-227254878</ch>
+   <ch rn="cin_736015646" ty="4">/mn-cse/cin-736015646</ch>
+   <ch rn="cin_449805799" ty="4">/mn-cse/cin-449805799</ch>
+   <ch rn="cin_153296757" ty="4">/mn-cse/cin-153296757</ch>
+   <ch rn="cin_762323705" ty="4">/mn-cse/cin-762323705</ch>
+   <ch rn="cin_302582988" ty="4">/mn-cse/cin-302582988</ch>
+   <ch rn="cin_532039041" ty="4">/mn-cse/cin-532039041</ch>
+   <ch rn="cin_634802960" ty="4">/mn-cse/cin-634802960</ch>
+   <ol>/mn-cse/mn-name/Alarm/STATE/ol</ol>
+   <la>/mn-cse/mn-name/Alarm/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:52:49,961 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:52:49,961 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-843540837,
+ resultContent=5,
+ ]
+[2021-01-01 11:52:49,961 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:52:49,961 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:52:49,961 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-843540837
+[2021-01-01 11:52:49,961 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:52:49,961 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:52:49,961 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-843540837,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:52:49,961 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:52:49,961 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-843540837?rcn=5 HTTP/1.1
+[2021-01-01 11:52:49,961 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:52:49,976 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-843540837</ri>
+   <pi>/mn-cse/CAE531904206</pi>
+   <ct>20201205T181315</ct>
+   <lt>20201205T181315</lt>
+   <acpi>/mn-cse/acp-161812228</acpi>
+   <et>20211205T181315</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/DoorActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/DoorActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:52:49,976 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-843540837</ri>
+   <pi>/mn-cse/CAE531904206</pi>
+   <ct>20201205T181315</ct>
+   <lt>20201205T181315</lt>
+   <acpi>/mn-cse/acp-161812228</acpi>
+   <et>20211205T181315</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/DoorActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/DoorActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:52:50,807 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:52:50,807 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-491058385,
+ resultContent=5,
+ ]
+[2021-01-01 11:52:50,807 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:52:50,807 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:52:50,807 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-491058385
+[2021-01-01 11:52:50,807 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:52:50,807 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:52:50,807 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-491058385,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:52:50,807 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:52:50,807 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-491058385?rcn=5 HTTP/1.1
+[2021-01-01 11:52:50,807 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:52:50,822 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:52:50,822 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-491058385</ri>
+   <pi>/mn-cse/CAE321878252</pi>
+   <ct>20201205T181243</ct>
+   <lt>20201205T181243</lt>
+   <acpi>/mn-cse/acp-214377095</acpi>
+   <et>20211205T181243</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/WindowActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/WindowActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:52:52,270 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:52:52,270 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-574029018,
+ resultContent=5,
+ ]
+[2021-01-01 11:52:52,270 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:52:52,270 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:52:52,270 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-574029018
+[2021-01-01 11:52:52,270 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:52:52,270 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:52:52,270 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-574029018,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:52:52,270 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:52:52,270 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-574029018?rcn=5 HTTP/1.1
+[2021-01-01 11:52:52,270 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:52:52,285 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:52:52,285 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="STATE">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-574029018</ri>
+   <pi>/mn-cse/CAE240603717</pi>
+   <ct>20201205T181212</ct>
+   <lt>20201205T181212</lt>
+   <acpi>/mn-cse/acp-9823410</acpi>
+   <et>20211205T181212</et>
+   <st>0</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>0</cni>
+   <cbs>0</cbs>
+   <ol>/mn-cse/mn-name/LightSwitchActuator/STATE/ol</ol>
+   <la>/mn-cse/mn-name/LightSwitchActuator/STATE/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:53:01,309 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:53:01,309 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-542822182,
+ resultContent=5,
+ ]
+[2021-01-01 11:53:01,309 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:53:01,309 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-542822182,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:53:01,309 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-542822182
+[2021-01-01 11:53:01,309 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:53:01,309 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-542822182,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:53:01,309 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-542822182,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:53:01,324 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:53:01,324 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-542822182?rcn=5 HTTP/1.1
+[2021-01-01 11:53:01,324 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:53:01,331 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DATA">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-542822182</ri>
+   <pi>/mn-cse/CAE427197276</pi>
+   <ct>20201126T152846</ct>
+   <lt>20201126T152846</lt>
+   <acpi>/mn-cse/acp-133640809</acpi>
+   <et>20211126T152846</et>
+   <st>37</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>36</cni>
+   <cbs>96</cbs>
+   <ch rn="cin_698473921" ty="4">/mn-cse/cin-698473921</ch>
+   <ch rn="cin_765528220" ty="4">/mn-cse/cin-765528220</ch>
+   <ch rn="cin_829734198" ty="4">/mn-cse/cin-829734198</ch>
+   <ch rn="cin_740997812" ty="4">/mn-cse/cin-740997812</ch>
+   <ch rn="cin_340568193" ty="4">/mn-cse/cin-340568193</ch>
+   <ch rn="cin_849001934" ty="4">/mn-cse/cin-849001934</ch>
+   <ch rn="cin_197806263" ty="4">/mn-cse/cin-197806263</ch>
+   <ch rn="cin_17010412" ty="4">/mn-cse/cin-17010412</ch>
+   <ch rn="cin_574154058" ty="4">/mn-cse/cin-574154058</ch>
+   <ch rn="cin_7749277" ty="4">/mn-cse/cin-7749277</ch>
+   <ch rn="cin_847026298" ty="4">/mn-cse/cin-847026298</ch>
+   <ch rn="cin_574220830" ty="4">/mn-cse/cin-574220830</ch>
+   <ch rn="cin_419938944" ty="4">/mn-cse/cin-419938944</ch>
+   <ch rn="cin_209000080" ty="4">/mn-cse/cin-209000080</ch>
+   <ch rn="cin_211100752" ty="4">/mn-cse/cin-211100752</ch>
+   <ch rn="cin_730743518" ty="4">/mn-cse/cin-730743518</ch>
+   <ch rn="cin_735241653" ty="4">/mn-cse/cin-735241653</ch>
+   <ch rn="cin_547022689" ty="4">/mn-cse/cin-547022689</ch>
+   <ch rn="cin_760948242" ty="4">/mn-cse/cin-760948242</ch>
+   <ch rn="cin_856348249" ty="4">/mn-cse/cin-856348249</ch>
+   <ch rn="cin_120024425" ty="4">/mn-cse/cin-120024425</ch>
+   <ch rn="cin_342948061" ty="4">/mn-cse/cin-342948061</ch>
+   <ch rn="cin_512470723" ty="4">/mn-cse/cin-512470723</ch>
+   <ch rn="cin_955736468" ty="4">/mn-cse/cin-955736468</ch>
+   <ch rn="cin_914078459" ty="4">/mn-cse/cin-914078459</ch>
+   <ch rn="cin_671903145" ty="4">/mn-cse/cin-671903145</ch>
+   <ch rn="cin_796407775" ty="4">/mn-cse/cin-796407775</ch>
+   <ch rn="cin_759637007" ty="4">/mn-cse/cin-759637007</ch>
+   <ch rn="cin_991874464" ty="4">/mn-cse/cin-991874464</ch>
+   <ch rn="cin_876594955" ty="4">/mn-cse/cin-876594955</ch>
+   <ch rn="cin_989695702" ty="4">/mn-cse/cin-989695702</ch>
+   <ch rn="cin_957978316" ty="4">/mn-cse/cin-957978316</ch>
+   <ch rn="cin_736460330" ty="4">/mn-cse/cin-736460330</ch>
+   <ch rn="cin_227877054" ty="4">/mn-cse/cin-227877054</ch>
+   <ch rn="cin_37591301" ty="4">/mn-cse/cin-37591301</ch>
+   <ch rn="cin_731118841" ty="4">/mn-cse/cin-731118841</ch>
+   <ol>/mn-cse/mn-name/LightSensor/DATA/ol</ol>
+   <la>/mn-cse/mn-name/LightSensor/DATA/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:53:01,331 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DATA">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-542822182</ri>
+   <pi>/mn-cse/CAE427197276</pi>
+   <ct>20201126T152846</ct>
+   <lt>20201126T152846</lt>
+   <acpi>/mn-cse/acp-133640809</acpi>
+   <et>20211126T152846</et>
+   <st>37</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>36</cni>
+   <cbs>96</cbs>
+   <ch rn="cin_698473921" ty="4">/mn-cse/cin-698473921</ch>
+   <ch rn="cin_765528220" ty="4">/mn-cse/cin-765528220</ch>
+   <ch rn="cin_829734198" ty="4">/mn-cse/cin-829734198</ch>
+   <ch rn="cin_740997812" ty="4">/mn-cse/cin-740997812</ch>
+   <ch rn="cin_340568193" ty="4">/mn-cse/cin-340568193</ch>
+   <ch rn="cin_849001934" ty="4">/mn-cse/cin-849001934</ch>
+   <ch rn="cin_197806263" ty="4">/mn-cse/cin-197806263</ch>
+   <ch rn="cin_17010412" ty="4">/mn-cse/cin-17010412</ch>
+   <ch rn="cin_574154058" ty="4">/mn-cse/cin-574154058</ch>
+   <ch rn="cin_7749277" ty="4">/mn-cse/cin-7749277</ch>
+   <ch rn="cin_847026298" ty="4">/mn-cse/cin-847026298</ch>
+   <ch rn="cin_574220830" ty="4">/mn-cse/cin-574220830</ch>
+   <ch rn="cin_419938944" ty="4">/mn-cse/cin-419938944</ch>
+   <ch rn="cin_209000080" ty="4">/mn-cse/cin-209000080</ch>
+   <ch rn="cin_211100752" ty="4">/mn-cse/cin-211100752</ch>
+   <ch rn="cin_730743518" ty="4">/mn-cse/cin-730743518</ch>
+   <ch rn="cin_735241653" ty="4">/mn-cse/cin-735241653</ch>
+   <ch rn="cin_547022689" ty="4">/mn-cse/cin-547022689</ch>
+   <ch rn="cin_760948242" ty="4">/mn-cse/cin-760948242</ch>
+   <ch rn="cin_856348249" ty="4">/mn-cse/cin-856348249</ch>
+   <ch rn="cin_120024425" ty="4">/mn-cse/cin-120024425</ch>
+   <ch rn="cin_342948061" ty="4">/mn-cse/cin-342948061</ch>
+   <ch rn="cin_512470723" ty="4">/mn-cse/cin-512470723</ch>
+   <ch rn="cin_955736468" ty="4">/mn-cse/cin-955736468</ch>
+   <ch rn="cin_914078459" ty="4">/mn-cse/cin-914078459</ch>
+   <ch rn="cin_671903145" ty="4">/mn-cse/cin-671903145</ch>
+   <ch rn="cin_796407775" ty="4">/mn-cse/cin-796407775</ch>
+   <ch rn="cin_759637007" ty="4">/mn-cse/cin-759637007</ch>
+   <ch rn="cin_991874464" ty="4">/mn-cse/cin-991874464</ch>
+   <ch rn="cin_876594955" ty="4">/mn-cse/cin-876594955</ch>
+   <ch rn="cin_989695702" ty="4">/mn-cse/cin-989695702</ch>
+   <ch rn="cin_957978316" ty="4">/mn-cse/cin-957978316</ch>
+   <ch rn="cin_736460330" ty="4">/mn-cse/cin-736460330</ch>
+   <ch rn="cin_227877054" ty="4">/mn-cse/cin-227877054</ch>
+   <ch rn="cin_37591301" ty="4">/mn-cse/cin-37591301</ch>
+   <ch rn="cin_731118841" ty="4">/mn-cse/cin-731118841</ch>
+   <ol>/mn-cse/mn-name/LightSensor/DATA/ol</ol>
+   <la>/mn-cse/mn-name/LightSensor/DATA/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:53:06,880 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:53:06,880 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE673524829,
+ resultContent=5,
+ ]
+[2021-01-01 11:53:06,880 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:53:06,880 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE673524829,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:53:06,880 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/CAE673524829
+[2021-01-01 11:53:06,880 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:53:06,880 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/CAE673524829,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:53:06,880 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/CAE673524829,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:53:06,880 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:53:06,880 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/CAE673524829?rcn=5 HTTP/1.1
+[2021-01-01 11:53:06,880 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:53:06,896 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="PresenceSensor">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE673524829</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201205T175100</ct>
+   <lt>20201205T175100</lt>
+   <lbl>Category/temperature Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-14417641</acpi>
+   <et>20211205T175100</et>
+   <api>app-sensor</api>
+   <aei>CAE673524829</aei>
+   <ch rn="DATA" ty="3">/mn-cse/cnt-428019228</ch>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-899628898</ch>
+   <rr>false</rr>
+</m2m:ae>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:53:06,896 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="PresenceSensor">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE673524829</ri>
+   <pi>/mn-cse</pi>
+   <ct>20201205T175100</ct>
+   <lt>20201205T175100</lt>
+   <lbl>Category/temperature Location/room Type/sensor</lbl>
+   <acpi>/mn-cse/acp-14417641</acpi>
+   <et>20211205T175100</et>
+   <api>app-sensor</api>
+   <aei>CAE673524829</aei>
+   <ch rn="DATA" ty="3">/mn-cse/cnt-428019228</ch>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-899628898</ch>
+   <rr>false</rr>
+</m2m:ae>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:53:07,745 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:53:07,745 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-428019228,
+ resultContent=5,
+ ]
+[2021-01-01 11:53:07,745 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:53:07,745 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-428019228,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:53:07,745 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cnt-428019228
+[2021-01-01 11:53:07,745 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:53:07,745 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-428019228,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:53:07,745 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cnt-428019228,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:53:07,745 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:53:07,745 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cnt-428019228?rcn=5 HTTP/1.1
+[2021-01-01 11:53:07,745 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:53:07,761 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DATA">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-428019228</ri>
+   <pi>/mn-cse/CAE673524829</pi>
+   <ct>20201205T175435</ct>
+   <lt>20201205T175435</lt>
+   <acpi>/mn-cse/acp-14417641</acpi>
+   <et>20211205T175435</et>
+   <st>32</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>32</cni>
+   <cbs>85</cbs>
+   <ch rn="cin_324801517" ty="4">/mn-cse/cin-324801517</ch>
+   <ch rn="cin_151732924" ty="4">/mn-cse/cin-151732924</ch>
+   <ch rn="cin_677151521" ty="4">/mn-cse/cin-677151521</ch>
+   <ch rn="cin_267742255" ty="4">/mn-cse/cin-267742255</ch>
+   <ch rn="cin_488353896" ty="4">/mn-cse/cin-488353896</ch>
+   <ch rn="cin_589761135" ty="4">/mn-cse/cin-589761135</ch>
+   <ch rn="cin_277684903" ty="4">/mn-cse/cin-277684903</ch>
+   <ch rn="cin_642208051" ty="4">/mn-cse/cin-642208051</ch>
+   <ch rn="cin_290793730" ty="4">/mn-cse/cin-290793730</ch>
+   <ch rn="cin_770259625" ty="4">/mn-cse/cin-770259625</ch>
+   <ch rn="cin_849301602" ty="4">/mn-cse/cin-849301602</ch>
+   <ch rn="cin_69883863" ty="4">/mn-cse/cin-69883863</ch>
+   <ch rn="cin_297684726" ty="4">/mn-cse/cin-297684726</ch>
+   <ch rn="cin_230591358" ty="4">/mn-cse/cin-230591358</ch>
+   <ch rn="cin_212635893" ty="4">/mn-cse/cin-212635893</ch>
+   <ch rn="cin_137563597" ty="4">/mn-cse/cin-137563597</ch>
+   <ch rn="cin_771754770" ty="4">/mn-cse/cin-771754770</ch>
+   <ch rn="cin_915791055" ty="4">/mn-cse/cin-915791055</ch>
+   <ch rn="cin_177517626" ty="4">/mn-cse/cin-177517626</ch>
+   <ch rn="cin_582744406" ty="4">/mn-cse/cin-582744406</ch>
+   <ch rn="cin_300135903" ty="4">/mn-cse/cin-300135903</ch>
+   <ch rn="cin_912808635" ty="4">/mn-cse/cin-912808635</ch>
+   <ch rn="cin_142307623" ty="4">/mn-cse/cin-142307623</ch>
+   <ch rn="cin_826199079" ty="4">/mn-cse/cin-826199079</ch>
+   <ch rn="cin_925795895" ty="4">/mn-cse/cin-925795895</ch>
+   <ch rn="cin_993530589" ty="4">/mn-cse/cin-993530589</ch>
+   <ch rn="cin_577166096" ty="4">/mn-cse/cin-577166096</ch>
+   <ch rn="cin_157203870" ty="4">/mn-cse/cin-157203870</ch>
+   <ch rn="cin_975766169" ty="4">/mn-cse/cin-975766169</ch>
+   <ch rn="cin_808890034" ty="4">/mn-cse/cin-808890034</ch>
+   <ch rn="cin_326020569" ty="4">/mn-cse/cin-326020569</ch>
+   <ch rn="cin_10014486" ty="4">/mn-cse/cin-10014486</ch>
+   <ol>/mn-cse/mn-name/PresenceSensor/DATA/ol</ol>
+   <la>/mn-cse/mn-name/PresenceSensor/DATA/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:53:07,761 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DATA">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-428019228</ri>
+   <pi>/mn-cse/CAE673524829</pi>
+   <ct>20201205T175435</ct>
+   <lt>20201205T175435</lt>
+   <acpi>/mn-cse/acp-14417641</acpi>
+   <et>20211205T175435</et>
+   <st>32</st>
+   <mni>1000</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>32</cni>
+   <cbs>85</cbs>
+   <ch rn="cin_324801517" ty="4">/mn-cse/cin-324801517</ch>
+   <ch rn="cin_151732924" ty="4">/mn-cse/cin-151732924</ch>
+   <ch rn="cin_677151521" ty="4">/mn-cse/cin-677151521</ch>
+   <ch rn="cin_267742255" ty="4">/mn-cse/cin-267742255</ch>
+   <ch rn="cin_488353896" ty="4">/mn-cse/cin-488353896</ch>
+   <ch rn="cin_589761135" ty="4">/mn-cse/cin-589761135</ch>
+   <ch rn="cin_277684903" ty="4">/mn-cse/cin-277684903</ch>
+   <ch rn="cin_642208051" ty="4">/mn-cse/cin-642208051</ch>
+   <ch rn="cin_290793730" ty="4">/mn-cse/cin-290793730</ch>
+   <ch rn="cin_770259625" ty="4">/mn-cse/cin-770259625</ch>
+   <ch rn="cin_849301602" ty="4">/mn-cse/cin-849301602</ch>
+   <ch rn="cin_69883863" ty="4">/mn-cse/cin-69883863</ch>
+   <ch rn="cin_297684726" ty="4">/mn-cse/cin-297684726</ch>
+   <ch rn="cin_230591358" ty="4">/mn-cse/cin-230591358</ch>
+   <ch rn="cin_212635893" ty="4">/mn-cse/cin-212635893</ch>
+   <ch rn="cin_137563597" ty="4">/mn-cse/cin-137563597</ch>
+   <ch rn="cin_771754770" ty="4">/mn-cse/cin-771754770</ch>
+   <ch rn="cin_915791055" ty="4">/mn-cse/cin-915791055</ch>
+   <ch rn="cin_177517626" ty="4">/mn-cse/cin-177517626</ch>
+   <ch rn="cin_582744406" ty="4">/mn-cse/cin-582744406</ch>
+   <ch rn="cin_300135903" ty="4">/mn-cse/cin-300135903</ch>
+   <ch rn="cin_912808635" ty="4">/mn-cse/cin-912808635</ch>
+   <ch rn="cin_142307623" ty="4">/mn-cse/cin-142307623</ch>
+   <ch rn="cin_826199079" ty="4">/mn-cse/cin-826199079</ch>
+   <ch rn="cin_925795895" ty="4">/mn-cse/cin-925795895</ch>
+   <ch rn="cin_993530589" ty="4">/mn-cse/cin-993530589</ch>
+   <ch rn="cin_577166096" ty="4">/mn-cse/cin-577166096</ch>
+   <ch rn="cin_157203870" ty="4">/mn-cse/cin-157203870</ch>
+   <ch rn="cin_975766169" ty="4">/mn-cse/cin-975766169</ch>
+   <ch rn="cin_808890034" ty="4">/mn-cse/cin-808890034</ch>
+   <ch rn="cin_326020569" ty="4">/mn-cse/cin-326020569</ch>
+   <ch rn="cin_10014486" ty="4">/mn-cse/cin-10014486</ch>
+   <ol>/mn-cse/mn-name/PresenceSensor/DATA/ol</ol>
+   <la>/mn-cse/mn-name/PresenceSensor/DATA/la</la>
+</m2m:cnt>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-10014486,
+ resultContent=5,
+ ]
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-10014486,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.core.router.Router 
+Request targeting another CSE, forwarding to Redirector: /mn-cse/cin-10014486
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+RemoteCSE found: /mn-cse
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cin-10014486,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=2,
+ to=http://127.0.0.1:8282/~/mn-cse/cin-10014486,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Query string generated: ?rcn=5
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: GET http://127.0.0.1:8282/~/mn-cse/cin-10014486?rcn=5 HTTP/1.1
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: application/xml
+X-M2M-Origin: admin:admin
+Content-Type: application/xml
+
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_10014486">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-10014486</ri>
+   <pi>/mn-cse/cnt-428019228</pi>
+   <ct>20210101T115217</ct>
+   <lt>20210101T115217</lt>
+   <st>0</st>
+   <cnf> </cnf>
+   <cs>2</cs>
+   <con>NO</con>
+</m2m:cin>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2021-01-01 11:53:09,621 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_10014486">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-10014486</ri>
+   <pi>/mn-cse/cnt-428019228</pi>
+   <ct>20210101T115217</ct>
+   <lt>20210101T115217</lt>
+   <st>0</st>
+   <cnf> </cnf>
+   <cs>2</cs>
+   <con>NO</con>
+</m2m:cin>
+
+,
+ to=admin:admin,
+ from=/in-cse,
+ contentType=application/xml;charset=ISO-8859-1,
+]

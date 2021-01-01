@@ -6,9 +6,12 @@ var baseurl = "http://localhost:8090";
 
       function loadSensorDataRoom(){
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET",baseurl + "/getRoomInfo/GEI-213/1",true);  
+
+        xmlhttp.open("GET","http://localhost:8090/getRoomInfo/GEI-213/1",true);  
+
         xmlhttp.onreadystatechange = function() {
-          if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+
+          if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
             var roomInfo = JSON.parse(xmlhttp.responseText);
             
             var lightInfoStr = JSON.stringify(roomInfo.light);
@@ -23,9 +26,9 @@ var baseurl = "http://localhost:8090";
             var roomWindows = "Current state of the windows: " + roomInfo.windowsState;
             var roomDoor = "Current state of the door(s): " + roomInfo.doorsState;
             var presence = "Presence of people inside the room: " + roomInfo.presence;
-            var alarm = "State alarm the room: " + roomName.alarmState;
+            var alarm = "State alarm the room: " + roomInfo.alarmState;
            
-            var main =  roomName + `<br/>` + `<br/>` + stateLightButton + `<br/>` + roomLight + `<br/>` + roomTemp + `<br/>` + roomWindows + `<br/>` + roomDoor + `<br/>` 
+           var main =  roomName + `<br/>` + `<br/>` + stateLightButton + `<br/>` + roomLight + `<br/>` + roomTemp + `<br/>` + roomWindows + `<br/>` + roomDoor + `<br/>` 
             + presence + `<br/>` + alarm +  `<br/>`;
             
             document.getElementById("currentRoomInfo").innerHTML = main;

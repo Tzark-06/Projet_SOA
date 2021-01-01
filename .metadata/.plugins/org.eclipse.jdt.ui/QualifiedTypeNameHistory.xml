@@ -9,8 +9,6 @@
 <fullyQualifiedTypeName name="java.awt.PageAttributes.MediaType"/>
 <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
 <fullyQualifiedTypeName name="org.springframework.http.HttpEntity"/>
-<fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.LightDataAcquisition"/>
-<fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.tempDataAcquisition"/>
 <fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.roomEnvironment"/>
 <fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.roomInfoList"/>
 <fullyQualifiedTypeName name="fr.insa.soa.AlarmManagementWS.model.AlarmDataList"/>
@@ -32,4 +30,6 @@
 <fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.HTTPMethodsRoomManagement"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.LightDataAcquisition"/>
+<fullyQualifiedTypeName name="fr.insa.soa.RoomManagementWS.model.tempDataAcquisition"/>
 </qualifiedTypeNameHistroy>
