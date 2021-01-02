@@ -35,7 +35,7 @@ public class RoomListResource {
 		roomObj.setRoomName(room);
 		
 		/******************************************************************************************************************************
-		 * Scenario  :	
+		 * Scenario  1:	
 		 * If the temperature is above 25 degrees and the window is closed, we open it, and on the contrary, if the temperature is below 18 
 		 * degrees and the window is open, we close it.
 		 * If somebody is inside and the luminosity is low, we switch on the light automatically, and if nobody is inside the room or the 
