@@ -34,7 +34,13 @@ public class RoomListResource {
 				
 		roomObj.setRoomName(room);
 		
-		//Scenario 1 :
+		/******************************************************************************************************************************
+		 * Scenario  :	
+		 * If the temperature is above 25 degrees and the window is closed, we open it, and on the contrary, if the temperature is below 18 
+		 * degrees and the window is open, we close it.
+		 * If somebody is inside and the luminosity is low, we switch on the light automatically, and if nobody is inside the room or the 
+		 * luminosity is high the light is switched off 
+		 *****************************************************************************************************************************/
 		if(scenario == 1) {
 			if(roomObj.getTemp().getValue() > 25 && roomObj.getWindowsState() == "CLOSED"){
 			  roomObj.setWindowsState("OPEN");
@@ -44,10 +50,10 @@ public class RoomListResource {
 			  httpController.sendDataToOM2M(windowActuatorUrl, "", "CLOSED");
 			 }
 
-			if(roomObj.getPresence() == "YES") {
+			if(roomObj.getPresence() == "YES" && roomObj.getLight().getValue() < 300) {
 				roomObj.setSwitchLight("ON");
 				httpController.sendDataToOM2M(switchLightUrl, "", "ON");
-			}else if(roomObj.getPresence() == "NO") {
+			}else if(roomObj.getPresence() == "NO" || roomObj.getLight().getValue() > 300) {
 				roomObj.setSwitchLight("OFF");
 				httpController.sendDataToOM2M(switchLightUrl, "", "OFF");
 			}
@@ -56,7 +62,7 @@ public class RoomListResource {
 		
 		/******************************************************************************************************************************
 		 * Scenario 2 :	
-		 * After 7 p.m., if the motion sensor indicates the presence of a person inside the room and the windows and doors are closed,
+		 * After 7 p.m. and before 6 a.m., if the motion sensor indicates the presence of a person inside the room and the windows and doors are closed,
 		 *  then the alarm goes off and the police are notified directly.
 		 ******************************************************************************************************************************/
 		else if(scenario == 2){
@@ -67,13 +73,14 @@ public class RoomListResource {
 			 
 			System.out.println(date_str);
 			
-			if(date_str.contains(" 19:")){
+			if(date_str.contains(" 19:") || date_str.contains(" 20:") ||date_str.contains(" 21:") ||date_str.contains(" 22:") ||date_str.contains(" 23:") ||date_str.contains(" 00:") ||date_str.contains(" 01:") ||date_str.contains(" 02:") ||date_str.contains(" 03:") ||date_str.contains(" 04:") ||date_str.contains(" 05:")){
 			/*We can suggest that a person can be inside because:
 				- we forgot him (he was sleeping...)
 				- a thief went through a vent
 			*/
 				if(roomObj.getPresence() == "YES" && roomObj.getWindowsState() == "CLOSED" && roomObj.getDoorsState() == "CLOSED") {
 					roomObj.setAlarmState("ON");
+					httpController.sendDataToOM2M(alarmUrl, "", "ON");
 				}
 
 			}
