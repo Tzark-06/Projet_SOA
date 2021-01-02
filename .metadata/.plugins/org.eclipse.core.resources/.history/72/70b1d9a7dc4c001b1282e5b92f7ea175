@@ -7,8 +7,6 @@ import org.json.JSONException;
 import org.springframework.web.bind.annotation.*;
 import fr.insa.soa.RoomManagementWS.model.*;
 import org.json.JSONException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 @CrossOrigin
 @RestController
@@ -54,29 +52,16 @@ public class RoomListResource {
 		
 		}
 		
-		/******************************************************************************************************************************
-		 * Scenario 2 :	
-		 * After 7 p.m., if the motion sensor indicates the presence of a person inside the room and the windows and doors are closed,
-		 *  then the alarm goes off and the police are notified directly.
-		 ******************************************************************************************************************************/
+		//Scenario 2 :
 		else if(scenario == 2){
 			
-			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/M/yyyy hh:mm:ss");
-			Date myDate = new Date();
-			String date_str = simpleDateFormat.format(myDate); // convert date to string 
-			 
-			System.out.println(date_str);
-			
-			if(date_str.contains(" 19:")){
-			/*We can suggest that a person can be inside because:
-				- we forgot him (he was sleeping...)
-				- a thief went through a vent
-			*/
-				if(roomObj.getPresence() == "YES" && roomObj.getWindowsState() == "CLOSED" && roomObj.getDoorsState() == "CLOSED") {
-					roomObj.setAlarmState("ON");
-				}
-
+			if(roomObj.getPresence() == "NO" && roomObj.getWindowsState() == "OPEN") {
+				roomObj.setAlarmState("OFF");
+				httpController.sendDataToOM2M(alarmUrl, "", "OFF");
+				roomObj.setWindowsState("CLOSED");
+				httpController.sendDataToOM2M(windowActuatorUrl, "", "CLOSED");
 			}
+			
 		}
 		
 		return roomObj;

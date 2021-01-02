@@ -1,0 +1,27 @@
+package fr.insa.soa.RoomManagementWS;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class RoomManagementWsApplication {
+
+	public static void main(String[] args) {
+		
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/M/yyyy hh:mm:ss");
+	    Date myDate = new Date();
+	    String date_str = simpleDateFormat.format(myDate); // convert date to string 
+	     
+	    System.out.println(date_str);
+	    
+	    if(date_str.contains(" 16:")){
+	    	System.out.println("okay");
+	    }
+		
+		SpringApplication.run(RoomManagementWsApplication.class, args);
+	}
+
+}

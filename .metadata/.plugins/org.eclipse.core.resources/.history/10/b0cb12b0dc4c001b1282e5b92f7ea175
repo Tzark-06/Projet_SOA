@@ -54,11 +54,7 @@ public class RoomListResource {
 		
 		}
 		
-		/******************************************************************************************************************************
-		 * Scenario 2 :	
-		 * After 7 p.m., if the motion sensor indicates the presence of a person inside the room and the windows and doors are closed,
-		 *  then the alarm goes off and the police are notified directly.
-		 ******************************************************************************************************************************/
+		//Scenario 2 :	
 		else if(scenario == 2){
 			
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/M/yyyy hh:mm:ss");
@@ -72,7 +68,7 @@ public class RoomListResource {
 				- we forgot him (he was sleeping...)
 				- a thief went through a vent
 			*/
-				if(roomObj.getPresence() == "YES" && roomObj.getWindowsState() == "CLOSED" && roomObj.getDoorsState() == "CLOSED") {
+				if(roomObj.getPresence() == "YES" && roomObj.getWindowsState() == "CLOSED" && roomObj.getDoordsState() == "CLOSED") {
 					roomObj.setAlarmState("ON");
 				}
 
