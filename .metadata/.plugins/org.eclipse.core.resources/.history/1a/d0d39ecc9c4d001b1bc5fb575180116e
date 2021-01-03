@@ -73,9 +73,7 @@ public class RoomListResource {
 			 
 			System.out.println(date_str);
 			
-			if(date_str.contains(" 19:") || date_str.contains(" 20:") ||date_str.contains(" 21:") ||date_str.contains(" 22:") ||
-					date_str.contains(" 23:") ||date_str.contains(" 00:") ||date_str.contains(" 01:") ||date_str.contains(" 02:") 
-					||date_str.contains(" 03:") ||date_str.contains(" 04:") ||date_str.contains(" 05:")){
+			if(date_str.contains(" 19:") || date_str.contains(" 20:") ||date_str.contains(" 21:") ||date_str.contains(" 22:") ||date_str.contains(" 23:") ||date_str.contains(" 00:") ||date_str.contains(" 01:") ||date_str.contains(" 02:") ||date_str.contains(" 03:") ||date_str.contains(" 04:") ||date_str.contains(" 05:")){
 			/*We can suggest that a person can be inside because:
 				- we forgot him (he was sleeping...)
 				- a thief went through a vent

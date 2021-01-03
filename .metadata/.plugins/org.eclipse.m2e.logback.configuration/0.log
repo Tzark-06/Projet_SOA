@@ -3180,3 +3180,18 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 2021-01-02 10:29:30,580 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2021-01-02 10:29:30,582 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-01-02 10:29:30,582 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\UtilisateurTZ\Supérieur\INSA\5A\Service Oriented Architecture\Projet_SOA\RoomManagementWS\RoomManagementWS\src\test\resources
+2021-01-03 09:17:25,037 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-03 09:17:25,061 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-01-03 09:17:25,083 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-01-03 09:17:25,086 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-03 09:17:25,087 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\UtilisateurTZ\Supérieur\INSA\5A\Service Oriented Architecture\Projet_SOA\RoomManagementWS\RoomManagementWS\src\test\resources
+2021-01-03 09:17:46,480 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-03 09:17:46,493 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-01-03 09:17:46,496 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-01-03 09:17:46,498 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-03 09:17:46,498 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\UtilisateurTZ\Supérieur\INSA\5A\Service Oriented Architecture\Projet_SOA\RoomManagementWS\RoomManagementWS\src\test\resources
+2021-01-03 09:22:21,494 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-03 09:22:21,495 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-01-03 09:22:21,498 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-01-03 09:22:21,500 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-03 09:22:21,500 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\UtilisateurTZ\Supérieur\INSA\5A\Service Oriented Architecture\Projet_SOA\RoomManagementWS\RoomManagementWS\src\test\resources
