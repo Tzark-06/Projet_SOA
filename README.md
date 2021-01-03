@@ -4,7 +4,7 @@
 ## Team
 Thomas Zennaro <br/>
 Victor Le Roch <br/>
-Valentin Licini 
+(Valentin Licini) 
 
 ---
 ## Description 
